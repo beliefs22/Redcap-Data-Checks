@@ -33,7 +33,7 @@ def visit1_check(visit1):
     if val.is_blank(visit1.pharyngeal.value):
         visit1.pharyngeal.fill = new_fill
     if val.is_blank(visit1.cervical.value):
-        visit1.cervial.fill = new_fill
+        visit1.cervical.fill = new_fill
     if val.is_blank(visit1.ams.value):
         visit1.aml.fill = new_fill
     if not val.valid_ph(visit1.ph.value):

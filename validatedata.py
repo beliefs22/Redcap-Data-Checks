@@ -29,7 +29,7 @@ main_file = openpyxl.load_workbook(
 
 main_sheet = main_file.active
 
-for i in range(193, main_sheet.max_row):
+for i in range(2, main_sheet.max_row):
     visit1_tuples = []
     visit2_tuples = []
     visit3_tuples = []
@@ -38,46 +38,42 @@ for i in range(193, main_sheet.max_row):
     antiviral_script_tuples = []
     antibiotic_tuples = []
     antibiotic_script_tuples = []
-    row = main_sheet.rows[i]
+    row = main_sheet[i]
     print "validating subject", row[0].value
-    number_of_visits = int(row[2].value)
-    for j in range(1,number_of_visits + 1):
-        print "looking at visit", j
-        visit1 = Visit1(*row[visit1_locations[j][0]:visit1_locations[j][1]])
-        checks.visit1_check(visit1)
-        print "made visit1"
-        visit2 = Visit2(*row[visit2_locations[j][0]:visit2_locations[j][1]])
-        print "made visit2"
-        print "next row is", visit3_locations[j][0], visit3_locations[j][1]
-        visit3 = Visit3(*row[visit3_locations[j][0]:visit3_locations[j][1]])
-        print "made visit3"
-        visit1_tuples.append(visit1)
-        visit2_tuples.append(visit2)
-        visit3_tuples.append(visit3)
-        #7 possible influenza test done
-        for k in range(1,8):
-            start = influenza_result_locations[j][0] + ((k-1) * 10)
-            influenza_result = Influenza_Result(*row[start: start + 10])
-            influenza_result_tuples.append(influenza_result)
-        #2 possible antiviral
-        for l in range(1,3):
-            start = antiviral_locations[j][0] + ((l-1) * 4)
-            antiviral = Antiviral(*row[start:start+4])
-            antiviral_tuples.append(antiviral)
-        #2 possible antiviral scripts
-        for m in range(1,3):
-            start = antiviral_script_locations[j][0] + ((m-1))
-            antiviral_script = Antiviral_Script(*row[start:start+1])
-            antiviral_script_tuples.append(antiviral_script)
-        #5 possible antibiotics given
-        for n in range(1,6):
-            start = antibiotic_locations[j][0] + ((n-1)* 5)
-            antibiotic = Antibiotic(*row[start:start+5])
-            antibiotic_tuples.append(antibiotic)
-        #3 possible anitiiotc scripts given
-        for o in range(1,4):
-            start = antibiotic_script_locations[j][0] + ((o-1) * 2)
-            antibiotic_scipt = Antibiotic_Script(*row[start:start+2])
-            antibiotic_script_tuples.append(Antibiotic_Script)
+    if row[2].value != None:
+        number_of_visits = int(row[2].value)
+        for j in range(1,number_of_visits + 1):
+            visit1 = Visit1(*row[visit1_locations[j][0]:visit1_locations[j][1]])
+            checks.visit1_check(visit1)
+            visit2 = Visit2(*row[visit2_locations[j][0]:visit2_locations[j][1]])
+            visit3 = Visit3(*row[visit3_locations[j][0]:visit3_locations[j][1]])
+            visit1_tuples.append(visit1)
+            visit2_tuples.append(visit2)
+            visit3_tuples.append(visit3)
+            #7 possible influenza test done
+            for k in range(1,8):
+                start = influenza_result_locations[j][0] + ((k-1) * 10)
+                influenza_result = Influenza_Result(*row[start: start + 10])
+                influenza_result_tuples.append(influenza_result)
+            #2 possible antiviral
+            for l in range(1,3):
+                start = antiviral_locations[j][0] + ((l-1) * 4)
+                antiviral = Antiviral(*row[start:start+4])
+                antiviral_tuples.append(antiviral)
+            #2 possible antiviral scripts
+            for m in range(1,3):
+                start = antiviral_script_locations[j][0] + ((m-1))
+                antiviral_script = Antiviral_Script(*row[start:start+1])
+                antiviral_script_tuples.append(antiviral_script)
+            #5 possible antibiotics given
+            for n in range(1,6):
+                start = antibiotic_locations[j][0] + ((n-1)* 5)
+                antibiotic = Antibiotic(*row[start:start+5])
+                antibiotic_tuples.append(antibiotic)
+            #3 possible anitiiotc scripts given
+            for o in range(1,4):
+                start = antibiotic_script_locations[j][0] + ((o-1) * 2)
+                antibiotic_scipt = Antibiotic_Script(*row[start:start+2])
+                antibiotic_script_tuples.append(Antibiotic_Script)
 
 main_file.save('test.xlsx')
