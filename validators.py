@@ -8,28 +8,21 @@ def yes_no_999(value):
 
 def is_date(value):
     if type(value) != datetime.datetime:
-        print value, "not date time"
         return False
     if value.month not in range(1,13):
-        print value, "month out"
         return False
     if value.day not in range(1,32):
-        print value, "day out"
         return False
     if value.year not in range(2015,2017):
-        print value,  "year out"
         return False
     return True
 
 def is_time(value):
     if type(value) != datetime.time:
-        print value, "time is not date time"
         return False
     if value.hour not in range(0, 25):
-        print value, "hour out"
         return False
     if value.minute not in range(0, 60):
-        print value,"minute out"
         return False
     return True
 
@@ -70,5 +63,5 @@ def valid_hematocrit(value):
     return value > 15 or value < 70
 
 def valid_result(value):
-    return value == "Negative" or value == "Positive"
+    return value == "Negative" or value == "Positive" or value == "Other"
 

@@ -1,0 +1,100 @@
+01-11-A-0004: Was influenza typing performed?
+01-11-A-0009: Was influenza typing performed?
+01-11-A-0011: Was influenza typing performed?
+01-11-A-0016: Was influenza typing performed?
+01-11-A-0017: Was influenza typing performed?
+01-11-A-0019: Was influenza typing performed?
+01-11-A-0020: Was influenza typing performed?
+01-11-A-0023: Test 1 Collection time (24-hour clock),Was influenza typing performed?
+01-11-A-0025: Was influenza typing performed?
+01-11-A-0033: Was influenza typing performed?
+01-11-A-0034: Was influenza typing performed?
+01-11-A-0035: Was influenza typing performed?
+01-11-A-0036: Was influenza typing performed?
+01-11-A-0038: Was influenza typing performed?
+01-11-A-0045: Was influenza typing performed?
+01-11-A-0047: Was influenza typing performed?
+01-11-A-0049: Was influenza typing performed?
+01-11-A-0051: Was influenza typing performed?,Was influenza typing performed?
+01-11-A-0052: Was influenza typing performed?
+01-11-A-0055: Was influenza typing performed?,Was influenza typing performed?
+01-11-A-0057: Was influenza typing performed?
+01-11-A-0060: Was influenza typing performed?
+01-11-A-0064: Was influenza typing performed?
+01-11-A-0066: Was influenza typing performed?
+01-11-A-0069: Was influenza typing performed?
+01-11-A-0070: Was influenza typing performed?
+01-11-A-0071: Test 1 Collection time (24-hour clock),Was influenza typing performed?,Was influenza typing performed?
+01-11-A-0072: Was influenza typing performed?
+01-11-A-0078: Was influenza typing performed?
+01-11-A-0084: Was influenza typing performed?
+01-11-A-0085: Was influenza typing performed?
+01-11-A-0103: Test 1 Type
+01-11-A-0105: How much? (L/min)
+01-11-A-0116: Was influenza typing performed?
+01-11-A-0117: Was influenza typing performed?
+01-11-A-0120: Was influenza typing performed?
+01-11-A-0126: Was influenza typing performed?
+01-11-A-0129: Was influenza typing performed?
+01-11-A-0131: Was the subject intubated?
+01-11-A-0135: Was influenza typing performed?
+01-11-A-0137: Was influenza typing performed?
+01-11-A-0138: Was influenza typing performed?
+01-11-A-0146: Was influenza typing performed?,Was influenza typing performed?
+01-11-A-0153: Was influenza typing performed?
+01-11-A-0157: Was influenza typing performed?
+01-12-A-0007: Was influenza typing performed?,Was influenza typing performed?
+01-12-A-0019: Was influenza typing performed?,Was influenza typing performed?
+01-12-A-0020: Was influenza typing performed?,Was influenza typing performed?
+01-12-A-0024: Was influenza typing performed?
+01-12-A-0029: Was influenza typing performed?
+01-12-A-0033: Was influenza typing performed?
+01-12-A-0035: Was influenza typing performed?
+01-12-A-0044: Was influenza typing performed?
+01-12-A-0048: Was influenza typing performed?
+01-12-A-0052: Was influenza typing performed?
+01-12-A-0054: Was influenza typing performed?
+01-12-A-0058: Was influenza typing performed?
+01-12-A-0062: Was influenza typing performed?
+01-12-A-0064: Was influenza typing performed?
+01-12-A-0069: Was influenza typing performed?
+01-12-A-0074: Was influenza typing performed?
+01-12-A-0079: Was influenza typing performed?
+01-12-A-0081: Was influenza typing performed?
+01-12-A-0082: Was influenza typing performed?
+01-12-A-0087: Was influenza typing performed?
+01-12-A-0090: Was influenza typing performed?
+01-12-A-0094: Was influenza typing performed?
+01-12-A-0098: Was influenza typing performed?
+01-12-A-0103: Influenza Antiviral 1 Time Administered:
+01-12-A-0109: Antibiotic 2 Time Administered:
+01-12-A-0116: Was influenza typing performed?
+01-12-A-0128: Was the subject intubated?
+01-12-A-0137: Was influenza typing performed?
+01-12-A-0140: Was influenza typing performed?
+01-12-A-0145: Was influenza typing performed?
+01-21-A-0041: Was influenza typing performed?
+01-21-A-0042: Was influenza typing performed?
+01-21-A-0054: Was influenza typing performed?
+01-21-A-0067: Was influenza typing performed?,Influenza Antiviral 1 Time Administered:
+01-21-A-0071: Was influenza typing performed?,Was influenza typing performed?,Was influenza typing performed?
+01-21-A-0094: Was influenza typing performed?
+01-21-A-0100: Was influenza typing performed?
+01-21-A-0116: Was influenza typing performed?
+01-21-A-0117: Was influenza typing performed?
+01-21-A-0122: Was influenza typing performed?,Was influenza typing performed?
+01-21-A-0131: Was influenza typing performed?
+01-21-A-0133: Was influenza typing performed?,Was influenza typing performed?
+01-21-A-0136: Did the subject die at this visit?
+01-21-A-0139: Pneumonia?
+01-21-A-0141: Was influenza typing performed?
+01-21-A-0142: Was influenza typing performed?
+01-22-A-0013: Antibiotic 1 Time Administered:
+01-22-A-0016: Influenza Antiviral 1 Time Administered:
+01-22-A-0021: Antibiotic 1 Time Administered:
+01-22-A-0073: Arrival Date:,Departure Date:,Test 1 Collection date ,Test 1 Result date ,Test 2 Collection date,Test 2 Result date,Test 3 Collection date 
+01-22-A-0074: Antibiotic 1 Date Administered:,Antibiotic 1 Time Administered:
+01-23-A-0045: Pharyngeal Erythema?
+01-23-A-0060: Was influenza typing performed?
+01-23-A-0066: Was the subject tested for any other viruses?
+01-23-A-0068: When the subject left the visit, did they require supplemental oxygen?
