@@ -1,12 +1,15 @@
 import validators as val
 from openpyxl.styles import PatternFill, colors
-
+#Used to fill cells with errors RED
 new_fill = PatternFill('solid', fgColor=colors.RED)
+#Used to remove numbers on a cell coordinate and replace it with 1 to get
+#header information assocaited with the cell
 def remove_num(num):
     for item in num[:]:
         if item.isdigit():
             num = num.replace(item,"")
     return num + "1"
+
 def visit1_check(visit1):
     errors = []
     if not val.is_date(visit1.arrival_date.value):

@@ -2,6 +2,7 @@ import openpyxl
 import collections
 import tuplesforvalidation as tup
 import checks
+import csv
 
 tuples = tup.mytuples()
 locations = tup.locations()
@@ -31,8 +32,9 @@ antibiotic_script_locations = locations.antibiotic_script_locations
 
 main_file = openpyxl.load_workbook(
     'Active_ED_Visit_Data_Check_10_6_16.xlsx')
-error_file = open('errors.txt','wb')
-
+error_file = open('ED_errors.csv','wb')
+csvwriter = csv.writer(error_file)
+csvwriter.writerow(['Subject ID','Error Locations'])
 main_sheet = main_file.active
 headers = main_sheet[1]
 
@@ -47,17 +49,26 @@ for i in range(2, main_sheet.max_row+1):
             results = checks.visit1_check(visit1)
             if results != []:
                 for item in results:
-                    all_errors.append(item)
+                    all_errors.append(
+                        (("Visit" + str(j),
+                          main_sheet[item].value,
+                          main_sheet[item].coordinate)))  
             visit2 = Visit2(*row[visit2_locations[j][0]:visit2_locations[j][1]])
             results = checks.visit2_check(visit2)
             if results != []:
                 for item in results:
-                    all_errors.append(item)
+                    all_errors.append(
+                        (("Visit" + str(j),
+                          main_sheet[item].value,
+                          main_sheet[item].coordinate)))  
             visit3 = Visit3(*row[visit3_locations[j][0]:visit3_locations[j][1]])
             results = checks.visit3_check(visit3)
             if results != []:
                 for item in results:
-                    all_errors.append(item)
+                    all_errors.append(
+                        (("Visit" + str(j),
+                          main_sheet[item].value,
+                          main_sheet[item].coordinate)))  
             #7 possible influenza test done
             influenza_result_num = row[influenza_result_num_locations[j]].value
             if influenza_result_num != None:
@@ -67,7 +78,10 @@ for i in range(2, main_sheet.max_row+1):
                     results =checks.influenza_result_check(influenza_result)
                     if results != []:
                         for item in results:
-                            all_errors.append(item)
+                            all_errors.append(
+                                (("Visit" + str(j),
+                                  main_sheet[item].value,
+                                  main_sheet[item].coordinate)))  
             #2 possible antiviral
             antiviral_num = row[antiviral_num_locations[j]].value
             if antiviral_num != None:
@@ -77,7 +91,10 @@ for i in range(2, main_sheet.max_row+1):
                     results = checks.antiviral_check(antiviral)
                     if results != []:
                         for item in results:
-                            all_errors.append(item)
+                            all_errors.append(
+                                (("Visit" + str(j),
+                                  main_sheet[item].value,
+                                  main_sheet[item].coordinate)))  
             #2 possible antiviral scripts
             antiviral_script_num = row[antiviral_script_num_locations[j]].value
             if antiviral_script_num != None:
@@ -87,7 +104,10 @@ for i in range(2, main_sheet.max_row+1):
                     results = checks.antiviral_script_check(antiviral_script)
                     if results != []:
                         for item in results:
-                            all_errors.append(item)
+                            all_errors.append(
+                                (("Visit" + str(j),
+                                  main_sheet[item].value,
+                                  main_sheet[item].coordinate)))  
             #5 possible antibiotics given
             antibiotic_num = row[antibiotic_num_locations[j]].value
             if antibiotic_num != None:
@@ -97,7 +117,10 @@ for i in range(2, main_sheet.max_row+1):
                     results = checks.antibiotic_check(antibiotic)
                     if results != []:
                         for item in results:
-                            all_errors.append(item)
+                            all_errors.append(
+                                (("Visit" + str(j),
+                                  main_sheet[item].value,
+                                  main_sheet[item].coordinate)))  
             #3 possible anitiiotc scripts given
             antibiotic_script_num = row[antibiotic_script_num_locations[j]].value
             if antibiotic_script_num != None:
@@ -107,12 +130,15 @@ for i in range(2, main_sheet.max_row+1):
                     results = checks.antibiotic_script_check(antibiotic_script)
                     if results != []:
                         for item in results:
-                            all_errors.append(item)
+                            all_errors.append(
+                                (("Visit" + str(j),
+                                  main_sheet[item].value,
+                                  main_sheet[item].coordinate)))  
         if all_errors != []:
-            all_errors = [main_sheet[item].value
-                          for item in all_errors]
-            error_file.write(row[0].value + ": " + ",".join(all_errors) + "\n")
+            print "writing errors for" + row[0].value
+            all_errors.insert(0,row[0].value)
+            csvwriter.writerow(all_errors)
             
-
-main_file.save('test.xlsx')
+main_file.save('ED_Form_REDCap_Errors.xlsx')
 error_file.close()
+print "Done"

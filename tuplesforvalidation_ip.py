@@ -41,6 +41,7 @@ influenza_result_fields = ['influenza_name', 'influenza_test_type',
 influenza_result_locations = {1:[43,113],2:[172,242],3:[301,371],4:[430,500],
                               5:[559,629],6:[688,758]}
 influenza_location_modifier = 10
+influenza_result_num_locations = {1:42,2:171,3:300,4:429,5:558,6:687}
 Influenza_Result = collections.namedtuple('Influenza_Results',
                                                  field_names=influenza_result_fields)
 
@@ -50,6 +51,8 @@ antiviral_fields = ['antiviral_name', 'antiviral_route',
                                   ]
 antiviral_locations = {1:[121,129],2:[250, 258],3:[379,387],4:[508,516],
                        5:[637,645],6:[766,774]}
+
+antiviral_num_locations = {1:120,2:249,3:378,4:507,5:636,6:765}
 antiviral_modifier = 4
 
 Antiviral = collections.namedtuple('Antiviral', field_names=antiviral_fields)
@@ -58,8 +61,10 @@ Antiviral = collections.namedtuple('Antiviral', field_names=antiviral_fields)
 antibiotic_fields = ['antibiotic_name', 'antibiotic_date','antibiotic_days',
                      'antibiotic_indication'
                      ]
-antibiotic_locations = {1:[22,41],2:[151,170],3:[280,299],4:[409,428],
-                        5:[538,557],6:[667,686]}
+antibiotic_locations = {1:[21,41],2:[150,170],3:[279,299],4:[408,428],
+                        5:[537,557],6:[666,686]}
+
+antibiotic_num_locations = {1:20,2:149,3:278,4:407,5:536,6:665}
 
 antibiotic_modifier = 5
 
@@ -68,12 +73,14 @@ Antibiotic = collections.namedtuple('Antibiotic', field_names=antibiotic_fields)
 def locations():
     
     field_names = ['visit1_locations','visit2_locations','visit3_locations',
-                   'influenza_result_locations','antiviral_locations',
-                   'antibiotic_locations',]
+                   'influenza_result_num_locations','influenza_result_locations',
+                   'antiviral_num_locations','antiviral_locations',
+                   'antibiotic_num_locations','antibiotic_locations',]
     
     all_locations = [visit1_locations,visit2_locations,visit3_locations,
-                     influenza_result_locations,antiviral_locations,
-                     antibiotic_locations]
+                     influenza_result_num_locations, influenza_result_locations,
+                     antiviral_num_locations, antiviral_locations,
+                     antibiotic_num_locations, antibiotic_locations]
     
     Locations = collections.namedtuple('Location',field_names=field_names)
     
