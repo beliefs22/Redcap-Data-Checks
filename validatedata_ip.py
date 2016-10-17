@@ -39,14 +39,14 @@ main_file = openpyxl.load_workbook(
 error_file = open('IP_Errors.csv','wb')
 csvwriter = csv.writer(error_file)
 #CSV file that tells where errors were found
-csvwriter.writerow(['Subject ID','Error Locations'])
+csvwriter.writerow(['Subject ID','Error Information'])
 #Each sheet only has one sheet which will be the active sheet
 main_sheet = main_file.active
 
 #Skip row one as it's just headers
 for i in range(2, main_sheet.max_row+1):
     row = main_sheet[i]
-    print "validating subject", row[0].value
+    #print "validating subject", row[0].value
     if row[2].value != None:
         all_errors = []
         number_of_visits = int(row[2].value)
@@ -57,27 +57,21 @@ for i in range(2, main_sheet.max_row+1):
             if results != []:
                 for item in results:
                     all_errors.append(
-                        (("Visit" + str(visit),
-                          main_sheet[item].value,
-                          main_sheet[item].coordinate)))                        
+                        (("Visit" + str(visit) + "_IP Chart Review",item)))                        
             visit2 = Visit2(
                 *row[visit2_locations[visit][0]:visit2_locations[visit][1]])
             results = checks.visit2_check(visit2)
             if results != []:
                 for item in results:
                     all_errors.append(
-                        (("Visit" + str(visit),
-                          main_sheet[item].value,
-                          main_sheet[item].coordinate)))
+                        (("Visit" + str(visit) + "_IP Chart Review",item)))  
             visit3 = Visit3(
                 *row[visit3_locations[visit][0]:visit3_locations[visit][1]])
             results = checks.visit3_check(visit3)
             if results != []:
                 for item in results:
                     all_errors.append(
-                        (("Visit" + str(visit),
-                          main_sheet[item].value,
-                          main_sheet[item].coordinate)))
+                        (("Visit" + str(visit) + "_IP Chart Review",item)))  
             #7 possible influenza test done
             influenza_result_num = row[influenza_result_num_locations[visit]].value
             if influenza_result_num != None:
@@ -86,12 +80,10 @@ for i in range(2, main_sheet.max_row+1):
                             + ((influenza_test-1) * 10)
                     influenza_result = Influenza_Result(*row[start: start + 10])
                     results =checks.influenza_result_check(influenza_result)
-                if results != []:
-                    for item in results:
-                        all_errors.append(
-                            (("Visit" + str(visit),
-                              main_sheet[item].value,
-                              main_sheet[item].coordinate)))
+                    if results != []:
+                        for item in results:
+                            all_errors.append(
+                                (("Visit" + str(visit) + "_IP Chart Review",item)))  
             #2 possible antiviral
             antiviral_num = row[antiviral_num_locations[visit]].value
             if antiviral_num != None:
@@ -100,12 +92,10 @@ for i in range(2, main_sheet.max_row+1):
                             ((antiviral_test-1) * 4)
                     antiviral = Antiviral(*row[start:start+4])
                     results = checks.antiviral_check(antiviral)
-                if results != []:
-                    for item in results:
-                        all_errors.append(
-                            (("Visit" + str(visit),
-                              main_sheet[item].value,
-                              main_sheet[item].coordinate)))
+                    if results != []:
+                        for item in results:
+                            all_errors.append(
+                                (("Visit" + str(visit) + "_IP Chart Review",item)))  
             #5 possible antibiotics given
             antibiotic_num = row[antibiotic_num_locations[visit]].value
             if antibiotic_num != None:
@@ -114,17 +104,15 @@ for i in range(2, main_sheet.max_row+1):
                             ((antibiotics-1)* 4)
                     antibiotic = Antibiotic(*row[start:start+4])
                     results = checks.antibiotic_check(antibiotic)
-                if results != []:
-                    for item in results:
-                        all_errors.append(
-                            (("Visit" + str(visit),
-                              main_sheet[item].value,
-                              main_sheet[item].coordinate)))
+                    if results != []:
+                        for item in results:
+                            all_errors.append(
+                                (("Visit" + str(visit) + "_IP Chart Review",item)))  
         if all_errors != []:
             print "writing errors for" + row[0].value
             all_errors.insert(0,row[0].value)
             csvwriter.writerow(all_errors)
             
-main_file.save('IP_Form_REDCap_Errors.xlsx')
+main_file.save('IP_Form_REDCap_Errors_HighlightedRed.xlsx')
 error_file.close()
 print "Done"

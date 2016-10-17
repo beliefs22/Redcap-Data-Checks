@@ -1,7 +1,5 @@
 import validators_updated as val
-from openpyxl.styles import PatternFill, colors
 
-new_fill = PatternFill('solid', fgColor=colors.RED)
 def remove_blanks(mylist):
     for item in mylist[:]:
         if item == "":
@@ -68,10 +66,11 @@ def influenza_result_check(influenza_result):
     errors.append(val.is_time(influenza_result.influenza_test_time))
     errors.append(val.is_date(influenza_result.influenza_result_date))
     errors.append(val.is_time(influenza_result.influenza_result_time))
-    errors.append(val.is_blank(influenza_result.influenza_typing_done))
-    if val.is_blank(influenza_result.influenza_typing_done) == "":
-        if influenza_result.influenza_typing_done.value == "Yes":
-            errors.append(val.is_blank(influenza_result.influenza_type))
+    if val.is_blank(influenza_result.influenza_result) == "":
+        if influenza_result.influenza_result == "Positive":
+            errors.append(val.is_blank(influenza_result.influenza_typing_done))
+            if influenza_result.influenza_typing_done.value == "Yes":
+                errors.append(val.is_blank(influenza_result.influenza_type))
     return remove_blanks(errors)
 
 def antiviral_check(antiviral):
