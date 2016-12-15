@@ -15,6 +15,7 @@ def remove_num(num):
 
 def is_blank(cell):
     if cell.value == None:
+        print 'empty cell', cell.value, cell.coordinate
         cell.fill = new_fill
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
