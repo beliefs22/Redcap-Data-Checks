@@ -1,13 +1,14 @@
 import collections
 import csv
 import openpyxl
-import checks_ed
+import checks_ed_old
 from openpyxl.styles import PatternFill, colors
 
 new_fill = PatternFill('solid', fgColor=colors.RED)
 
-with open('CEIRSActiveSurveilla_DATA_2016-12-14_1657.csv') as myfile,\
-    open('CEIRSActiveSurveilla_DATA_LABELS_2016-12-14_1856.xlsx') as testfile:
+with open('CEIRSActiveSurveilla_DATA_2016-12-18_1135.csv', 'rb') as myfile,\
+    open('CEIRSActiveSurveilla_DATA_LABELS_2016-12-18_1137.xlsx', 'rb') as testfile, \
+    open('output.txt', 'w') as outfile:
     csvreader = csv.DictReader(myfile)
     headers = csvreader.fieldnames
     subject_data = openpyxl.load_workbook(testfile)
@@ -23,15 +24,19 @@ with open('CEIRSActiveSurveilla_DATA_2016-12-14_1657.csv') as myfile,\
                                ])
         mytuples.append(one_visit)
     results = []
+    complex, simple = checks_ed_old.field_names()
     for atuple in mytuples:
-        result = {}
-        result[atuple.id.value] = checks_ed.ed_check(atuple)
-        results.append(result)
-    for result in results:
-        key, value = result.items()[0]
-        if value:
-            print key, value
-    subject_data.save('new_test_ouput.xlsx')
+        for field_names in complex:
+            print "looking for fields", field_names
+            answer = checks_ed_old.complex_check(atuple, complex[field_names])
+            if answer:
+                results.append((atuple.id.value, answer))
 
+    final_result = collections.defaultdict(list)
+    for item in results:
+        final_result[item[0]] += item[1]
+    for key, value in final_result.iteritems():
+        outfile.write("Subject: {} Errors: {}\n\n\n".format(key, value))
+    subject_data.save('text.xlsx')
 
 

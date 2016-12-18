@@ -2,7 +2,7 @@ import datetime
 import openpyxl
 from openpyxl.styles import PatternFill, colors
 
-wb = openpyxl.load_workbook('Active_ED_Visit_Data_Check_10_6_16_testing.xlsx')
+wb = openpyxl.load_workbook('CEIRSActiveSurveilla_DATA_LABELS_2016-12-18_1137.xlsx')
 sheet = wb.active
 
 new_fill = PatternFill('solid', fgColor=colors.RED)
@@ -15,7 +15,6 @@ def remove_num(num):
 
 def is_blank(cell):
     if cell.value == None:
-        print 'empty cell', cell.value, cell.coordinate
         cell.fill = new_fill
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
