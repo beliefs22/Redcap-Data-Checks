@@ -1,92 +1,134 @@
-import validators_updated as val
+import validators_ed as val
+
 
 def remove_blanks(mylist):
     for item in mylist[:]:
         if item == "":
             mylist.remove(item)
     return mylist
-def visit1_check(visit1):
-    errors = []
-    errors.append(val.is_date(visit1.start_date))
-    errors.append(val.is_date(visit1.end_date))
-    errors.append(val.is_blank(visit1.oxygen_sup))
-    if val.is_blank(visit1.oxygen_sup) == "":
-        if visit1.oxygen_sup.value == "Yes":
-            errors.append(val.is_blank(visit1.oxygen_sup_rate))
-            errors.append(val.is_blank(visit1.oxygen_sup_route))
-    errors.append(val.is_blank(visit1.icu))
-    if val.is_blank(visit1.icu) == "":
-        if visit1.icu.value == "Yes":
-            errors.append(val.is_blank(visit1.icu_start))
-            errors.append(val.is_blank(visit1.icu_days))
-    errors.append(val.is_blank(visit1.death))
-    if val.is_blank(visit1.death) == "":
-        if visit1.death.value == "Yes":
-            errors.append(val.is_blank(visit1.death_date))
-    return remove_blanks(errors)
-
-def visit2_check(visit2):
-    errors = []
-    errors.append(val.is_blank(visit2.other_virus))
-    if val.is_blank(visit2.other_virus) == "":
-        if visit2.other_virus.value == "Yes":
-            errors.append(val.is_blank(visit2.rsv))
-            errors.append(val.is_blank(visit2.parainfluenza))
-            errors.append(val.is_blank(visit2.rhinovirus))
-            errors.append(val.is_blank(visit2.metapneumovirus))
-            errors.append(val.is_blank(visit2.adenovirus))
-    return remove_blanks(errors)
-
-def visit3_check(visit3):
-    errors = []
-    errors.append(val.is_blank(visit3.diagnosis_influenza))
-    errors.append(val.is_blank(visit3.diagnosis_viral))
-    errors.append(val.is_blank(visit3.diagnosis_pneumonia))
-    errors.append(val.is_blank(visit3.diagnosis_mi))
-    errors.append(val.is_blank(visit3.diagnosis_stroke))
-    errors.append(val.is_blank(visit3.diagnosis_num))
-    if val.is_blank(visit3.diagnosis_num) == "":
-        if visit3.diagnosis_num.value in [1,"more than three"]:
-            errors.append(val.is_blank(visit3.diagnosis1))
-            if visit3.diagnosis_num.value in [2, "more than three"]:
-                errors.append(val.is_blank(visit3.diagnosis2))
-                if visit3.diagnosis_num.value in [3, "more than three"]:
-                    errors.append(val.is_blank(visit3.diagnosis3))
-    return remove_blanks(errors)
-                        
-def influenza_result_check(influenza_result):
-    errors = []
-    errors.append(val.is_blank(influenza_result.influenza_name))       
-    errors.append(val.is_blank(influenza_result.influenza_test_type))
-    if val.is_blank(influenza_result.influenza_test_type) == "":
-        if influenza_result.influenza_test_type.value == "Other":
-            errors.append(val.is_blank(influenza_result.influenza_type_other))
-    errors.append(val.valid_result(influenza_result.influenza_result))
-    errors.append(val.is_date(influenza_result.influenza_test_date))
-    errors.append(val.is_time(influenza_result.influenza_test_time))
-    errors.append(val.is_date(influenza_result.influenza_result_date))
-    errors.append(val.is_time(influenza_result.influenza_result_time))
-    if val.is_blank(influenza_result.influenza_result) == "":
-        if influenza_result.influenza_result == "Positive":
-            errors.append(val.is_blank(influenza_result.influenza_typing_done))
-            if influenza_result.influenza_typing_done.value == "Yes":
-                errors.append(val.is_blank(influenza_result.influenza_type))
-    return remove_blanks(errors)
-
-def antiviral_check(antiviral):
-    errors = []
-    errors.append(val.is_blank(antiviral.antiviral_name))
-    errors.append(val.is_blank(antiviral.antiviral_route))
-    errors.append(val.is_date(antiviral.antiviral_date))
-    errors.append(val.is_time(antiviral.antiviral_time))
-    return remove_blanks(errors)
 
 
-def antibiotic_check(antibiotic):
-    errors = []
-    errors.append(val.is_blank(antibiotic.antibiotic_name))
-    errors.append(val.is_date(antibiotic.antibiotic_date))
-    errors.append(val.is_blank(antibiotic.antibiotic_days))
-    errors.append(val.is_blank(antibiotic.antibiotic_indication))
-    return remove_blanks(errors)
+def field_names():
+    """Returns dictionary of field names for named tuple"""
+    complex_fields = dict()
+    simple_fields = ['ps_ipchrev%d_inptstart','ps_ipchrev%d_inptend', 'ps_ipchrev%d_dxflu',
+                     'ps_ipchrev%d_dxviralsynd', 'ps_ipchrev%d_dxpneumon', 'ps_ipchrev%d_dxmi','ps_ipchrev%d_dxstroke'
+                     ]
+    # complex_fields['intermediate_fields'] = ['ps_ipchrev%d_temp','ps_ipchrev%d_pulse', 'ps_ipchrev%d_rr', 'ps_ipchrev%d_sbp',
+    #                        'ps_ipchrev%d_o2s', 'ps_ipchrev%d_ph', 'ps_ipchrev%d_bun',
+    #                        'ps_ipchrev%d_sodium', 'ps_ipchrev%d_glucose', 'ps_ipchrev%d_hemocr'
+    #                        ]
 
+    complex_fields['o2_fields'] = {'start': 'ps_ipchrev%d_o2sup', 'num': None, 'check' : ['ps_ipchrev%d_o2sup_l',
+                                                                                          'ps_ipchrev%d_o2sup_r']}
+
+    complex_fields['influenza_test_fields'] = {'start': 'ps_ipchrev%d_flutesting', 'num' : 'ps_ipchrev%d_flutests',
+                                               'check' : ['ps_ipchrev%d_flut%d_name', 'ps_ipchrev%d_flut%d_testtype',
+                                                          ['ps_ipchrev%d_flut%d_testsp',
+                                                           "ed_tuple.ps_ipchrev%d_flut%d_testtype.value == 'Other'"],
+                                                          'ps_ipchrev%d_flut%d_res', 'ps_ipchrev%d_flut%d_cold',
+                                                          'ps_ipchrev%d_flut%d_colt', 'ps_ipchrev%d_flut%d_resd',
+                                                          'ps_ipchrev%d_flut%d_rest',
+                                                          ['ps_ipchrev%d_flut%d_typing',
+                                                           "ed_tuple.ps_ipchrev%d_flut%d_res.value == 'Positive'"],
+                                                          ['ps_ipchrev%d_flut%d_typsp',
+                                                           "ed_tuple.ps_ipchrev%d_flut%d_typsp.value == 'Other'"]]
+                                               }
+
+    complex_fields['other_virus_test'] = {'start': 'ps_ipchrev%d_othervir', 'num': None,
+                                          'check': ['ps_ipchrev%d_othervir_rsv','ps_ipchrev%d_othervir_para',
+                                                    'ps_ipchrev%d_othervir_rhino', 'ps_ipchrev%d_othervir_meta',
+                                                    'ps_ipchrev%d_othervir_adeno']
+                                          }
+
+    complex_fields['influenza_antiviral_fields'] = {'start': 'ps_ipchrev%d_fluav', 'num': 'ps_ipchrev%d_fluavnum',
+                                                    'check': ['ps_ipchrev%d_fluav%d_name', 'ps_ipchrev%d_fluav%droute',
+                                                              'ps_ipchrev%d_fluav%ddate', 'ps_ipchrev%d_fluav%dtime']
+                                                    }
+
+
+    complex_fields['antibiotic_fields'] = {'start': 'ps_ipchrev%d_ab_ed', 'num': 'ps_ipchrev%d_ab_ed_num',
+                                           'check' : ['ps_ipchrev%d_ab_ed%d_name', 'ps_ipchrev%d_ab_ed%d_days',
+                                                      'ps_ipchrev%d_ab_ed%d_indic', 'ps_ipchrev%d_ab_ed%d_date']
+                                           }
+
+
+    complex_fields['death_fields'] = {'start': 'ps_ipchrev%d_die', 'num': None,
+                                      'check': [['ps_ipchrev%d_diedate',
+                                                 "ed_tuple.ps_ipchrev%d_die.value == 'Yes'"]]
+                                      }
+
+    complex_fields['diagnosis_fields'] = {'start': 'ps_ipchrev%d_findxnum', 'num': 'ps_ipchrev%d_findxnum',
+                                          'check': ['ps_ipchrev%d_findx%d']
+                                          }
+
+    return complex_fields, simple_fields
+
+
+def simple_blank_check(ed_tuple, simple_fields):
+    """Checks cells that don't require complex testing for blank values"""
+    #number of visits to check for
+    visit_number = ed_tuple.inptchart_visitnumber.value
+    fields_to_check = []
+    errors = []
+    if visit_number:
+        for i in range(1, visit_number + 1):
+            for field in simple_fields:
+                fields_to_check.append(field % i)
+        for field in fields_to_check:
+            statement = 'val.is_blank(ed_tuple.%s)' % field
+            errors.append(eval(statement))
+        return remove_blanks(errors)
+
+
+def complex_check(ed_tuple, complex_fields):
+    ed_tuple = ed_tuple
+    visit_num = ed_tuple.inptchart_visitnumber.value
+    if visit_num is None or visit_num == 0:
+        return []
+    print visit_num, "visit number"
+    for i in range(1, visit_num + 1):
+        print "how is it referencced before!?!?!"
+        # filed that starts the complex check
+        start = complex_fields['start'] % visit_num
+        # number of items to check for if None means its a single item field
+        num = complex_fields['num']
+        if num is not None:
+            num = eval('ed_tuple.%s.value' % (num % visit_num))
+        # fields to check if they are blank only if start isn't blank
+        check = complex_fields['check']
+        errors = []
+        start_statement = 'val.is_blank(ed_tuple.%s)' % start
+        start_check = eval(start_statement)
+        errors.append(start_check)
+        # if not blank do complex search
+        if start_check == "":
+            positive_result = eval('ed_tuple.%s.value' % start)
+            if positive_result in [1,2,3,'more than three', "Yes"]:
+                for field_name in check:
+                    if num is not None:
+                        if num == 'more than three':
+                            num = 3
+                        for i in range(1, num + 1):
+                            if type(field_name) == list:
+                                check_statement = field_name[1] % (visit_num, i)
+                                if eval(check_statement):
+                                    field = field_name[0] % (visit_num, i)
+                                    statement = 'val.is_blank(ed_tuple.%s)' % field
+                                    errors.append(eval(statement))
+                            else:
+                                field = field_name % (visit_num, i)
+                                statement = 'val.is_blank(ed_tuple.%s)' % field
+                                errors.append(eval(statement))
+                    if num is None:
+                        if type(field_name) == list:
+                            check_statement = field_name[1] % visit_num
+                            if eval(check_statement):
+                                field = field_name[0] % visit_num
+                                statement = 'val.is_blank(ed_tuple.%s)' % field
+                                errors.append(eval(statement))
+                        else:
+                            field = field_name % visit_num
+                            statement = 'val.is_blank(ed_tuple.%s)' % field
+                            errors.append(eval(statement))
+    return remove_blanks(errors)

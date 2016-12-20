@@ -1,166 +1,49 @@
-Subject: 01-11-A-0173 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_res', 'Value: None, RedCap Label: ps_edchrev1_flut2_resd', 'Value: None, RedCap Label: ps_edchrev1_flut2_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
+Subject: 01-11-A-0173 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut2_res', 'Value: None, RedCap Label: ps_edchrev1_flut2_resd', 'Value: None, RedCap Label: ps_edchrev1_flut2_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
 
 
 Subject: 01-11-A-0172 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-11-A-0078 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0171 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
 Subject: 01-11-A-0170 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
 
 
-Subject: 01-11-A-0177 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1route', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0177 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1route', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0176 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1route', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0176 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1route', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0175 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-11-A-0072 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0073 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0070 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0178 Errors: ['Value: None, RedCap Label: ps_edchrev4_findxnum', 'Value: None, RedCap Label: ps_edchrev4_dabx', 'Value: None, RedCap Label: ps_edchrev4_fluavdisc']
-
-
-Subject: 01-11-A-0076 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0077 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0074 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0129 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0122 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut3_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp']
-
-
-Subject: 01-21-A-0121 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0127 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0126 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0125 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0124 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0042 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp']
-
-
-Subject: 01-12-A-0054 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-12-A-0053 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0052 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-22-A-0033 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0034 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp']
-
-
-Subject: 01-11-A-0210 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-11-A-0211 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-12-A-0107 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0039 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0104 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0103 Errors: ['Value: None, RedCap Label: ps_edchrev1_fluav1time', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
+Subject: 01-11-A-0175 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
 Subject: 01-11-A-0179 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
 
 
+Subject: 01-11-A-0178 Errors: ['Value: None, RedCap Label: ps_edchrev4_findxnum', 'Value: None, RedCap Label: ps_edchrev4_dabx', 'Value: None, RedCap Label: ps_edchrev4_fluavdisc']
+
+
+Subject: 01-11-A-0077 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
+
+
+Subject: 01-11-A-0210 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+
+
+Subject: 01-11-A-0211 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+
+
+Subject: 01-12-A-0103 Errors: ['Value: None, RedCap Label: ps_edchrev1_fluav1time']
+
+
 Subject: 01-11-A-0065 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0064 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0067 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0066 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0060 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0062 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-23-A-0060 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0069 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
 
 
 Subject: 01-21-A-0116 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-21-A-0117 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0114 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0115 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0112 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0113 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0110 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0111 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0118 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
 Subject: 01-21-A-0119 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-12-A-0029 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0055 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp']
-
-
-Subject: 01-21-A-0054 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
 
 
 Subject: 01-21-A-0053 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
@@ -169,31 +52,22 @@ Subject: 01-21-A-0053 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutestin
 Subject: 01-21-A-0051 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx3']
 
 
-Subject: 01-12-A-0020 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp']
+Subject: 01-11-A-0201 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed3_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-12-A-0024 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0200 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-12-A-0062 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0203 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0201 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed3_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0202 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0200 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0205 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0203 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-11-A-0202 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-11-A-0205 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-11-A-0204 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0204 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
 Subject: 01-11-A-0207 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
@@ -205,79 +79,19 @@ Subject: 01-11-A-0206 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum'
 Subject: 01-11-A-0209 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
 
 
-Subject: 01-11-A-0208 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-22-A-0029 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-22-A-0028 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0208 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
 Subject: 01-12-A-0136 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-12-A-0137 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0011 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
 Subject: 01-11-A-0013 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0016 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0017 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-22-A-0075 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0019 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0101 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0100 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut4_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut4_typing', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut4_typsp']
-
-
-Subject: 01-21-A-0109 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0129 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0062 Errors: ['Value: None, RedCap Label: ps_edchrev2_flut1_testsp']
-
-
-Subject: 01-22-A-0023 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
 Subject: 01-21-A-0061 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-11-A-0166 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
-
-
-Subject: 01-12-A-0033 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0068 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp']
-
-
-Subject: 01-12-A-0035 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0168 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
 Subject: 01-12-A-0127 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-22-A-0069 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
 Subject: 01-11-A-0148 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
@@ -286,304 +100,58 @@ Subject: 01-11-A-0148 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutestin
 Subject: 01-11-A-0146 Errors: ['Value: None, RedCap Label: ps_edchrev2_flutesting']
 
 
-Subject: 01-22-A-0003 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
 Subject: 01-11-A-0144 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0145 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0142 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0143 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0140 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0026 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0001 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0128 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0006 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0004 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp']
-
-
-Subject: 01-11-A-0124 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
 Subject: 01-11-A-0125 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-11-A-0009 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0008 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
 Subject: 01-11-A-0120 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0121 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0122 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0123 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0068 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0079 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0078 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0066 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-a-0191 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-21-A-0071 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut3_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp']
-
-
-Subject: 01-22-A-0065 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
 Subject: 01-21-A-0073 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx2']
 
 
-Subject: 01-11-A-0098 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0099 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0056 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0090 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0091 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp']
-
-
 Subject: 01-11-A-0092 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0093 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0096 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
 Subject: 01-11-A-0097 Errors: ['Value: None, RedCap Label: ps_edchrev2_flutesting']
 
 
-Subject: 01-11-A-0158 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
 Subject: 01-23-A-0009 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0150 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0153 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0152 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0082 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0154 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0157 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-12-A-0081 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0142 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0139 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0138 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0137 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0135 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0134 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0133 Errors: ['Value: None, RedCap Label: ps_edchrev2_flut1_testsp']
-
-
-Subject: 01-11-A-0132 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0130 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0095 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0069 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0002 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0025 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0006 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0110 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0089 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0088 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0083 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0082 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0081 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0080 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0086 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0085 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0084 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0080 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_res', 'Value: None, RedCap Label: ps_edchrev1_flut3_rest', 'Value: None, RedCap Label: ps_edchrev1_flut3_typing', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv', 'Value: None, RedCap Label: ps_edchrev1_othervir_para', 'Value: None, RedCap Label: ps_edchrev1_othervir_rhino', 'Value: None, RedCap Label: ps_edchrev1_othervir_meta', 'Value: None, RedCap Label: ps_edchrev1_othervir_adeno']
-
-
-Subject: 01-12-A-0098 Errors: ['Value: None, RedCap Label: ps_edchrev2_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev2_flut1_typing', 'Value: None, RedCap Label: ps_edchrev2_flut1_typsp']
-
-
-Subject: 01-12-A-0141 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0140 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-22-A-0078 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
 Subject: 01-23-A-0003 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-12-A-0145 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0088 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-12-A-0091 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
+Subject: 01-11-A-0080 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-12-A-0090 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-21-A-0080 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut3_res', 'Value: None, RedCap Label: ps_edchrev1_flut3_rest', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv', 'Value: None, RedCap Label: ps_edchrev1_othervir_para', 'Value: None, RedCap Label: ps_edchrev1_othervir_rhino', 'Value: None, RedCap Label: ps_edchrev1_othervir_meta', 'Value: None, RedCap Label: ps_edchrev1_othervir_adeno']
 
 
-Subject: 01-22-A-0076 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0077 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0070 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0094 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-22-A-0072 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0073 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp']
-
-
-Subject: 01-11-A-0108 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0109 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
+Subject: 01-21-A-0083 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx2', 'Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
 Subject: 01-12-A-0109 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed2time', 'Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-22-A-0060 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp']
-
-
-Subject: 01-12-A-0007 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp']
-
-
 Subject: 01-11-A-0102 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-11-A-0103 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testtype', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp']
+Subject: 01-11-A-0103 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testtype']
 
 
-Subject: 01-11-A-0100 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
+Subject: 01-11-a-0191 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0101 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
+Subject: 01-11-A-0105 Errors: ['Value: None, RedCap Label: ps_edchrev1_o2sup_l']
 
 
-Subject: 01-11-A-0106 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0107 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0104 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0118 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-22-A-0074 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0019 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx2', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0089 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
+Subject: 01-21-A-0019 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx2']
 
 
 Subject: 01-21-A-0013 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
@@ -592,106 +160,13 @@ Subject: 01-21-A-0013 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutestin
 Subject: 01-21-A-0016 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-21-A-0014 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp']
-
-
-Subject: 01-21-A-0083 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx2', 'Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-21-A-0133 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut3_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp']
-
-
-Subject: 01-22-A-0071 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0064 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0091 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-21-A-0090 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0038 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0094 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp']
-
-
-Subject: 01-11-A-0036 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0037 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0086 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp']
-
-
-Subject: 01-22-A-0064 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0033 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0031 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0115 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0114 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0117 Errors: ['Value: None, RedCap Label: ps_edchrev2_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev2_flut1_typing', 'Value: None, RedCap Label: ps_edchrev2_flut1_typsp']
-
-
-Subject: 01-11-A-0116 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0111 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
 Subject: 01-11-A-0059 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
 Subject: 01-11-A-0113 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-11-A-0112 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0055 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp']
-
-
-Subject: 01-11-A-0057 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0051 Errors: ['Value: None, RedCap Label: ps_edchrev2_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev2_flut1_typing', 'Value: None, RedCap Label: ps_edchrev2_flut1_typsp']
-
-
-Subject: 01-11-A-0052 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-23-A-0045 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0171 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
-
-
 Subject: 01-21-A-0020 Errors: ['Value: None, RedCap Label: ps_edchrev2_findx3']
-
-
-Subject: 01-21-A-0145 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp']
-
-
-Subject: 01-21-A-0141 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-12-A-0019 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp']
-
-
-Subject: 01-23-A-0070 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
 
 
 Subject: 01-11-A-0182 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
@@ -709,16 +184,13 @@ Subject: 01-11-A-0181 Errors: ['Value: None, RedCap Label: ps_edchrev2_findxnum'
 Subject: 01-11-A-0186 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed3_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-11-A-0187 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0187 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0184 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_res', 'Value: None, RedCap Label: ps_edchrev1_flut2_resd', 'Value: None, RedCap Label: ps_edchrev1_flut2_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
+Subject: 01-11-A-0184 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut2_res', 'Value: None, RedCap Label: ps_edchrev1_flut2_resd', 'Value: None, RedCap Label: ps_edchrev1_flut2_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
 
 
 Subject: 01-11-A-0185 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed3_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed4_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed5_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
-
-
-Subject: 01-11-A-0020 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
 
 
 Subject: 01-11-A-0188 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
@@ -727,79 +199,46 @@ Subject: 01-11-A-0188 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum'
 Subject: 01-11-A-0189 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-12-A-0079 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
 Subject: 01-11-A-0026 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-11-A-0163 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0164 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
 Subject: 01-11-A-0165 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-11-A-0049 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0166 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-11-A-0167 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0167 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0047 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-11-A-0168 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
 Subject: 01-11-A-0169 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-11-A-0045 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-23-A-0059 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx3', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-11-A-0041 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
+Subject: 01-23-A-0059 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx3']
 
 
 Subject: 01-21-A-0138 Errors: ['Value: None, RedCap Label: ps_edchrev1_findx3']
 
 
-Subject: 01-12-A-0087 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0131 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut3_typing', 'Value: None, RedCap Label: ps_edchrev1_flut3_typsp']
-
-
-Subject: 01-21-A-0132 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-11-A-0105 Errors: ['Value: None, RedCap Label: ps_edchrev1_o2sup_l', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0116 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-21-A-0067 Errors: ['Value: None, RedCap Label: ps_edchrev2_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev2_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev2_flut2_typing', 'Value: None, RedCap Label: ps_edchrev2_flut2_typingsp']
-
-
 Subject: 01-11-A-0199 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-11-A-0198 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed3_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed4_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed5_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
+Subject: 01-11-A-0198 Errors: ['Value: None, RedCap Label: ps_edchrev1_suppoxy', 'Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed3_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed4_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed5_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
 
 
-Subject: 01-11-a-0174 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-a-0174 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0195 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0195 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0194 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluav1route', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_res', 'Value: None, RedCap Label: ps_edchrev1_flut2_resd', 'Value: None, RedCap Label: ps_edchrev1_flut2_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut2_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_typingsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
+Subject: 01-11-A-0194 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_ab_ed2_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluav1route', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut2_res', 'Value: None, RedCap Label: ps_edchrev1_flut2_resd', 'Value: None, RedCap Label: ps_edchrev1_flut2_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum']
 
 
-Subject: 01-11-A-0197 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0197 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
 Subject: 01-11-A-0196 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_indic', 'Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
@@ -808,33 +247,15 @@ Subject: 01-11-A-0196 Errors: ['Value: None, RedCap Label: ps_edchrev1_ab_ed1_in
 Subject: 01-11-A-0190 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc']
 
 
-Subject: 01-11-A-0193 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
+Subject: 01-11-A-0193 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
-Subject: 01-11-A-0192 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
-
-
-Subject: 01-22-A-0044 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut2_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-22-A-0047 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
-
-
-Subject: 01-12-A-0118 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
+Subject: 01-11-A-0192 Errors: ['Value: None, RedCap Label: ps_edchrev1_findxnum', 'Value: None, RedCap Label: ps_edchrev1_dabx', 'Value: None, RedCap Label: ps_edchrev1_fluavdisc', 'Value: None, RedCap Label: ps_edchrev1_flut1_res', 'Value: None, RedCap Label: ps_edchrev1_flut1_resd', 'Value: None, RedCap Label: ps_edchrev1_flut1_rest', 'Value: None, RedCap Label: ps_edchrev1_chest_pulm', 'Value: None, RedCap Label: ps_edchrev1_chest_consol', 'Value: None, RedCap Label: ps_edchrev1_chest_pleur', 'Value: None, RedCap Label: ps_edchrev1_chest_suspneum', 'Value: None, RedCap Label: ps_edchrev1_othervir_rsv']
 
 
 Subject: 01-12-A-0119 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
 
 
-Subject: 01-12-A-0044 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
-Subject: 01-12-A-0048 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp', 'Value: None, RedCap Label: ps_edchrev1_flut1_typing', 'Value: None, RedCap Label: ps_edchrev1_flut1_typsp']
-
-
 Subject: 01-12-A-0049 Errors: ['Value: None, RedCap Label: ps_edchrev1_flutesting']
-
-
-Subject: 01-12-A-0111 Errors: ['Value: None, RedCap Label: ps_edchrev1_flut1_testsp']
 
 
