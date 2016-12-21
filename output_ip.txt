@@ -1,0 +1,57 @@
+Subject: 01-21-A-0116 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 3']
+
+
+Subject: 01-11-A-0109 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-21-A-0003 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-11-A-0092 Errors: ['Value: None, RedCap Label: Influenza Antiviral 1 Time Administered:']
+
+
+Subject: 01-23-A-0067 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-21-A-0019 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 2']
+
+
+Subject: 01-11-A-0077 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-12-A-0026 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-21-A-0058 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 3']
+
+
+Subject: 01-21-A-0101 Errors: ['Value: None, RedCap Label: Did the subject receive an antibiotic this visit?', 'Value: None, RedCap Label: Did subject die in the hospital?', 'Value: None, RedCap Label: Did the subject receive supplemental oxygen in the hospital?', 'Value: None, RedCap Label: Did the subject receive an influenza antiviral in the hospital?', 'Value: None, RedCap Label: How many final diagnoses did the subject have?', 'Value: None, RedCap Label: Did the subject receive influenza testing?', 'Value: None, RedCap Label: Was the subject tested for any other viruses?']
+
+
+Subject: 01-21-A-0013 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-12-A-0127 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-12-A-0109 Errors: ['Value: None, RedCap Label: Influenza Antiviral 1 Time Administered:', 'Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-11-A-0151 Errors: ['Value: None, RedCap Label: Influenza Antiviral 1 Time Administered:']
+
+
+Subject: 01-12-A-0104 Errors: ['Value: None, RedCap Label: Influenza Antiviral 1 Time Administered:']
+
+
+Subject: 01-12-A-0103 Errors: ['Value: None, RedCap Label: Influenza Antiviral 1 Time Administered:', 'Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-11-A-0045 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
+
+
+Subject: 01-12-A-0080 Errors: ['Value: None, RedCap Label: Influenza Antiviral 1 Time Administered:']
+
+
+Subject: 01-22-A-0073 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 3']
+
+

@@ -17,7 +17,7 @@ with open('CEIRSActiveSurveilla_DATA_2016-12-18_1135.csv', 'rb') as myfile,\
 
     ed_tuple = collections.namedtuple('ED', field_names=headers)
     rows = data_sheet.iter_rows()
-    rows.next()
+    readable_headers = rows.next()
     mytuples = []
     for row in rows:
         one_visit = ed_tuple(*[cell
@@ -27,6 +27,8 @@ with open('CEIRSActiveSurveilla_DATA_2016-12-18_1135.csv', 'rb') as myfile,\
     results = []
     complex, simple = checks_ed_old.field_names()
     for atuple in mytuples:
+        if atuple.form_10a_ed_chart_review_active_surveillance_complete.value != 'Complete':
+            continue
         answer = checks_ed_old.simple_blank_check(atuple, simple)
         if answer:
             results.append((atuple.id.value, answer))
@@ -47,8 +49,8 @@ with open('CEIRSActiveSurveilla_DATA_2016-12-18_1135.csv', 'rb') as myfile,\
     subject_data.save('ed_text.xlsx')
     print "finished"
 
-with open('CEIRSActiveSurveilla_DATA_2016-12-19_1814.csv', 'rb') as myfile,\
-    open('CEIRSActiveSurveilla_DATA_LABELS_2016-12-19_1814.xlsx', 'rb') as testfile, \
+with open('CEIRSActiveSurveilla_DATA_2016-12-21_1806.csv', 'rb') as myfile,\
+    open('CEIRSActiveSurveilla_DATA_LABELS_2016-12-21_1806.xlsx', 'rb') as testfile, \
     open('output_ip.txt', 'w') as outfile:
     csvreader = csv.DictReader(myfile)
     headers = csvreader.fieldnames
@@ -67,6 +69,8 @@ with open('CEIRSActiveSurveilla_DATA_2016-12-19_1814.csv', 'rb') as myfile,\
     results = []
     complex, simple = checks_ip_updated.field_names()
     for atuple in mytuples:
+        if atuple.form_11a_chart_review_inpatient_hospitalization_complete.value != 'Complete':
+            continue
         for field_names in complex:
             print "looking for fields", field_names
             answer = checks_ip_updated.complex_check(atuple, complex[field_names])

@@ -2,16 +2,18 @@ import datetime
 import openpyxl
 from openpyxl.styles import PatternFill, colors
 
-wb = openpyxl.load_workbook('Active_IP_Visit_Data_Check_10_6_16.xlsx')
+wb = openpyxl.load_workbook('CEIRSActiveSurveilla_DATA_LABELS_2016-12-21_1806.xlsx')
 sheet = wb.active
 
 new_fill = PatternFill('solid', fgColor=colors.RED)
 
+
 def remove_num(num):
     for item in num[:]:
         if item.isdigit():
-            num = num.replace(item,"")
+            num = num.replace(item, "")
     return num + "1"
+
 
 def is_blank(cell):
     if cell.value == None:
@@ -21,38 +23,43 @@ def is_blank(cell):
     else:
         return ""
 
+
 def yes_no_999(cell):
-    if cell.value == "Yes" or cell.value =="No" or cell.value==999:
+    if cell.value == "Yes" or cell.value == "No" or cell.value == 999:
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" %\
+        return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+
+
 def is_date(cell):
     if type(cell.value) != datetime.datetime:
         cell.fill = new_fill
         return "Value: %s, REDCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
-    if cell.value.month not in range(1,13) or \
-       cell.value.day not in range(1,32) or \
-       cell.value.year not in range(2015,2017):
+    if cell.value.month not in range(1, 13) or \
+                    cell.value.day not in range(1, 32) or \
+                    cell.value.year not in range(2015, 2017):
         cell.fill = new_fill
         return "Value: %s, REDCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))    
+               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
     return ""
+
 
 def is_time(cell):
     if type(cell.value) != datetime.time:
         cell.fill = new_fill
         return "Value: %s, REDCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))    
+               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
     if cell.value.hour not in range(0, 25) or \
-       cell.value.minute not in range(0, 60):
+                    cell.value.minute not in range(0, 60):
         cell.fill = new_fill
         return "Value: %s, REDCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
-    
+
     return ""
+
 
 def valid_temp(cell):
     if cell.value > 34.7 or cell.value < 40.8:
@@ -62,6 +69,7 @@ def valid_temp(cell):
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
 
+
 def valid_pulse(cell):
     if cell.value > 50 or cell.value < 200:
         return ""
@@ -69,6 +77,7 @@ def valid_pulse(cell):
         cell.fill = new_fill
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+
 
 def valid_resp(cell):
     if cell.value > 10 or cell.value < 45:
@@ -78,6 +87,7 @@ def valid_resp(cell):
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
 
+
 def valid_systolic(cell):
     if cell.value > 60 or cell.value < 240:
         return ""
@@ -85,6 +95,7 @@ def valid_systolic(cell):
         cell.fill = new_fill
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+
 
 def valid_oxygen(cell):
     if cell.value > 70 or cell.value < 100:
@@ -94,6 +105,7 @@ def valid_oxygen(cell):
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
 
+
 def yes_no(cell):
     if cell.value == "Yes" or cell.value == "No":
         return ""
@@ -101,6 +113,7 @@ def yes_no(cell):
         cell.fill = new_fill
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+
 
 def yes_no_unknown(cell):
     if cell.value == "Yes" or cell.value == "No" or cell.value == "Unknown":
@@ -110,6 +123,7 @@ def yes_no_unknown(cell):
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
 
+
 def valid_ph(cell):
     if cell.value > 4 or cell.value < 10:
         return ""
@@ -117,6 +131,7 @@ def valid_ph(cell):
         cell.fill = new_fill
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+
 
 def valid_bun(cell):
     if cell.value > 3 or cell.value < 30 or cell.value == 999:
@@ -126,6 +141,7 @@ def valid_bun(cell):
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
 
+
 def valid_sodium(cell):
     if cell.value > 120 or cell.value < 147 or cell.value == 999:
         return ""
@@ -134,13 +150,15 @@ def valid_sodium(cell):
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
 
+
 def valid_glucose(cell):
-    if cell.value >50 or cell.value < 600 or cell.value == 999:
+    if cell.value > 50 or cell.value < 600 or cell.value == 999:
         return ""
     else:
         cell.fill = new_fill
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+
 
 def valid_hematocrit(cell):
     if cell.value > 15 or cell.value < 70:
@@ -150,9 +168,10 @@ def valid_hematocrit(cell):
         return "Value: %s, RedCap Label: %s" % \
                (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
 
+
 def valid_result(cell):
-    if cell.value == "Negative" or cell.value == "Positive" or\
-       cell.value == "Other":
+    if cell.value == "Negative" or cell.value == "Positive" or \
+                    cell.value == "Other":
         return ""
     else:
         cell.fill = new_fill

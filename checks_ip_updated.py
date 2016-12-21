@@ -1,4 +1,4 @@
-import validators_ed as val
+import validators_ip as val
 
 
 def remove_blanks(mylist):
@@ -86,9 +86,7 @@ def complex_check(ed_tuple, complex_fields):
     visit_num = ed_tuple.inptchart_visitnumber.value
     if visit_num is None or visit_num == 0:
         return []
-    print visit_num, "visit number"
     for i in range(1, visit_num + 1):
-        print "how is it referencced before!?!?!"
         # filed that starts the complex check
         start = complex_fields['start'] % visit_num
         # number of items to check for if None means its a single item field

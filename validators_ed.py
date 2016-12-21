@@ -1,6 +1,8 @@
 import datetime
 import openpyxl
 from openpyxl.styles import PatternFill, colors
+import csv
+
 
 wb = openpyxl.load_workbook('CEIRSActiveSurveilla_DATA_LABELS_2016-12-18_1137.xlsx')
 sheet = wb.active
