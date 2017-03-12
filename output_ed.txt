@@ -1,126 +1,177 @@
-Subject: 01-11-A-0013 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0059 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0113 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0077 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0101 Errors: ['Value: None, REDCap Label: Departure Time:']
-
-
-Subject: 01-21-A-0020 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 3']
-
-
-Subject: 01-11-A-0088 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0080 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0080 Errors: ['Value: None, RedCap Label: Test 3 Result', 'Value: None, RedCap Label: Test 3 Result time  (24-hour clock)', 'Value: None, RedCap Label: Respiratory Syncytial Virus (RSV)', 'Value: None, RedCap Label: Parainfluenza (1, 2, or 3)', 'Value: None, RedCap Label: Rhinovirus', 'Value: None, RedCap Label: Metapneumovirus', 'Value: None, RedCap Label: Adenovirus']
-
-
-Subject: 01-22-A-0073 Errors: ['Value: 2106-02-24 00:00:00, REDCap Label: Arrival Date:', 'Value: 2106-02-24 00:00:00, REDCap Label: Departure Date:']
-
-
-Subject: 01-12-A-0127 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0083 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 2', 'Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-12-A-0109 Errors: ['Value: None, RedCap Label: Antibiotic 2 Time Administered:', 'Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0125 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0146 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0144 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-12-A-0103 Errors: ['Value: None, RedCap Label: Influenza Antiviral 1 Time Administered:']
-
-
-Subject: 01-11-A-0026 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0065 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0148 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0102 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0103 Errors: ['Value: None, RedCap Label: Test 1 Type']
-
-
-Subject: 01-11-A-0120 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-11-A-0105 Errors: ['Value: None, RedCap Label: How much? (L/min)']
-
-
-Subject: 01-21-A-0116 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0019 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 2']
-
-
-Subject: 01-21-A-0061 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0013 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0016 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0073 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 2']
-
-
-Subject: 01-21-A-0119 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0138 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 3']
-
-
-Subject: 01-21-A-0053 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-21-A-0051 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 3']
-
-
-Subject: 01-11-A-0092 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-23-A-0059 Errors: ['Value: None, RedCap Label: Final ED Diagnosis Code 3']
-
-
-Subject: 01-11-A-0097 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-12-A-0119 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-23-A-0009 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-12-A-0049 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-12-A-0136 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
-Subject: 01-23-A-0003 Errors: ['Value: None, RedCap Label: Did the subject receive influenza testing?']
-
-
+Subject 01-11-A-0013 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0059 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0113 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0077 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0101 Errors:
+							1. RedCap Label: Departure Time:, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0020 Errors:
+							1. RedCap Label: Final ED Diagnosis Code 3, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0088 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0080 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0080 Errors:
+							1. RedCap Label: Test 3 Result, Value: None
+							2. RedCap Label: Test 3 Result time  (24-hour clock), Value: None
+							3. RedCap Label: Respiratory Syncytial Virus (RSV), Value: None
+							4. RedCap Label: Parainfluenza (1, 2, or 3), Value: None
+							5. RedCap Label: Rhinovirus, Value: None
+							6. RedCap Label: Metapneumovirus, Value: None
+							7. RedCap Label: Adenovirus, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-22-A-0073 Errors:
+							1. RedCap Label: Arrival Date:, Value: 2106-02-24 00:00:00
+							2. RedCap Label: Departure Date:, Value: 2106-02-24 00:00:00
+
+------------------------------------------------------------------------------------------
+Subject 01-12-A-0127 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0083 Errors:
+							1. RedCap Label: Final ED Diagnosis Code 2, Value: None
+							2. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-12-A-0109 Errors:
+							1. RedCap Label: Antibiotic 2 Time Administered:, Value: None
+							2. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0125 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0146 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0144 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-12-A-0103 Errors:
+							1. RedCap Label: Influenza Antiviral 1 Time Administered:, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0026 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0065 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0148 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0102 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0103 Errors:
+							1. RedCap Label: Test 1 Type, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0120 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0105 Errors:
+							1. RedCap Label: How much? (L/min), Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0116 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0019 Errors:
+							1. RedCap Label: Final ED Diagnosis Code 2, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0061 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0013 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0016 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0073 Errors:
+							1. RedCap Label: Final ED Diagnosis Code 2, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0119 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0138 Errors:
+							1. RedCap Label: Final ED Diagnosis Code 3, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0053 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-21-A-0051 Errors:
+							1. RedCap Label: Final ED Diagnosis Code 3, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0092 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-23-A-0059 Errors:
+							1. RedCap Label: Final ED Diagnosis Code 3, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-11-A-0097 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-12-A-0119 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-23-A-0009 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-12-A-0049 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-12-A-0136 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------
+Subject 01-23-A-0003 Errors:
+							1. RedCap Label: Did the subject receive influenza testing?, Value: None
+
+------------------------------------------------------------------------------------------

@@ -31,6 +31,7 @@ def field_names():
 
     complex_fields['influenza_test_fields'] = {'start': 'ps_edchrev%d_flutesting', 'num' : 'ps_edchrev%d_flutests',
                                                'check' : ['ps_edchrev%d_flut%d_name', 'ps_edchrev%d_flut%d_testtype',
+                                                          #you will only check index 0 if index 1 evalutates to true
                                                           ['ps_edchrev%d_flut%d_testsp',
                                                            "ed_tuple.ps_edchrev%d_flut%d_testtype.value == 'Other'"],
                                                           'ps_edchrev%d_flut%d_res', 'ps_edchrev%d_flut%d_cold',
@@ -128,7 +129,7 @@ def complex_check(ed_tuple, complex_fields):
         num = complex_fields['num']
         if num is not None:
             num = eval('ed_tuple.%s.value' % (num % visit_num))
-        # fields to check if they are blank only if start isn't blank
+        # fields to check if they are blank only start if isn't blank
         check = complex_fields['check']
         errors = []
         start_statement = 'val.is_blank(ed_tuple.%s)' % start

@@ -18,8 +18,8 @@ def remove_num(num):
 def is_blank(cell):
     if cell.value == None:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
     else:
         return ""
 
@@ -29,34 +29,34 @@ def yes_no_999(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def is_date(cell):
     if type(cell.value) != datetime.datetime:
         cell.fill = new_fill
-        return "Value: %s, REDCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
     if cell.value.month not in range(1, 13) or \
                     cell.value.day not in range(1, 32) or \
                     cell.value.year not in range(2015, 2017):
         cell.fill = new_fill
-        return "Value: %s, REDCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
     return ""
 
 
 def is_time(cell):
     if type(cell.value) != datetime.time:
         cell.fill = new_fill
-        return "Value: %s, REDCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
     if cell.value.hour not in range(0, 25) or \
                     cell.value.minute not in range(0, 60):
         cell.fill = new_fill
-        return "Value: %s, REDCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
     return ""
 
@@ -66,8 +66,8 @@ def valid_temp(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_pulse(cell):
@@ -75,8 +75,8 @@ def valid_pulse(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_resp(cell):
@@ -84,8 +84,8 @@ def valid_resp(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_systolic(cell):
@@ -93,8 +93,8 @@ def valid_systolic(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_oxygen(cell):
@@ -102,8 +102,8 @@ def valid_oxygen(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def yes_no(cell):
@@ -111,8 +111,8 @@ def yes_no(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def yes_no_unknown(cell):
@@ -120,8 +120,8 @@ def yes_no_unknown(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_ph(cell):
@@ -129,8 +129,8 @@ def valid_ph(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_bun(cell):
@@ -138,8 +138,8 @@ def valid_bun(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_sodium(cell):
@@ -147,8 +147,8 @@ def valid_sodium(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_glucose(cell):
@@ -156,8 +156,8 @@ def valid_glucose(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_hematocrit(cell):
@@ -165,8 +165,8 @@ def valid_hematocrit(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
 
 def valid_result(cell):
@@ -175,6 +175,6 @@ def valid_result(cell):
         return ""
     else:
         cell.fill = new_fill
-        return "Value: %s, RedCap Label: %s" % \
-               (str(cell.value), str(sheet[remove_num(cell.coordinate)].value))
+        return "RedCap Label: %s, Value: %s" % \
+               (str(sheet[remove_num(cell.coordinate)].value), str(cell.value))
 
