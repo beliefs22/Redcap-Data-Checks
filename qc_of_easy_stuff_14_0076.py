@@ -14,9 +14,12 @@ def get_fields():
         symptom_sheet = all_headers.get_sheet_by_name('Symptoms')
         medical_sheet = all_headers.get_sheet_by_name('Medical')
         enrollment_specimen_sheet = all_headers.get_sheet_by_name('Enrollment_Specimen')
+        follow_up_assessment_sheet = all_headers.get_sheet_by_name('Follow_Up_Assessment')
+        follow_up_specimen_sheet = all_headers.get_sheet_by_name('Follow_Up_Specimen')
 
         all_sheets = {'eligibility': eligibility_sheet, 'demographic': demographic_sheet, 'symptoms': symptom_sheet,
-                      'medical': medical_sheet, 'enrollment_specimen': enrollment_specimen_sheet}
+                      'medical': medical_sheet, 'enrollment_specimen': enrollment_specimen_sheet,
+                      'follow_up_assessment' : follow_up_assessment_sheet, 'follow_up_specimen': follow_up_specimen_sheet}
         headers_and_fields = {}
         for sheet_name, sheet in all_sheets.iteritems():
             data_in_sheet = sheet.iter_rows()
@@ -292,12 +295,116 @@ def enrollment_specimen_check():
                                 eval("val.is_blank(" + statement % (field_name % i,) + ")")
 
         enrollment_specimen_workbook.save('14_0076_enrollment_specimen_w_highlighted_erroros.xlsx')
+
+def follow_up_assessment_check():
+    with open('14_0076_Follow_Up_Assessment.xlsx', 'rb') as follow_up_assessment_file:
+        follow_up_assessment_workbook = openpyxl.load_workbook(follow_up_assessment_file)
+        follow_up_assessment_worksheet = follow_up_assessment_workbook.active
+        headers_and_fields = get_fields()
+        follow_up_assessment_headers = headers_and_fields['follow_up_assessment']['headers']
+        follow_up_assessment_fields = headers_and_fields['follow_up_assessment']['fields']
+
+        follow_up_assessment_tuple = collections.namedtuple('follow_up_assessment', field_names=follow_up_assessment_headers)
+        follow_up_assessment_data = follow_up_assessment_worksheet.iter_rows()
+        #skip human readable headres follow_up_assessment_file
+        follow_up_assessment_data.next()
+        follow_up_assessment_data_to_check = []
+
+        for row in follow_up_assessment_data:
+            one_subjects_data = follow_up_assessment_tuple(*[cell
+                                                    for cell in row
+                                                    ])
+            follow_up_assessment_data_to_check.append(one_subjects_data)
+
+        statement = "follow_up_assessment_tuple.%s"
+        for follow_up_assessment_tuple in follow_up_assessment_data_to_check:
+            for field in follow_up_assessment_fields:
+                if field[0] == 'simple':
+                    print "simple ran"
+                    simple_field_names = field[1:]
+                    for field_name in simple_field_names:
+                        eval("val.is_blank(" + statement % (field_name,) + ")")
+
+                if field[0] == 'complex without number':
+                    print "complex without number ran"
+                    start_check = field[1]
+                    complex_field_names = field[2:]
+                    #check start condition
+                    if eval("follow_up_assessment_tuple.%s" % start_check) == True:
+                        for field_name in complex_field_names:
+                            eval("val.is_blank(" + statement % (field_name,) + ")")
+
+                if field[0] == 'complex with number':
+                    start_check = field[1]
+                    number_to_check = field[2]
+                    complex_field_names = field[3:]
+                    #check start condition
+                    if eval("follow_up_assessment_tuple.%s" % start_check) == True:
+                        for i in range(1, number_to_check + 1):
+                            for field_name in complex_field_names:
+                                eval("val.is_blank(" + statement % (field_name % i,) + ")")
+
+        follow_up_assessment_workbook.save('14_0076_follow_up_assessment_w_highlighted_erroros.xlsx')
+
+
+def follow_up_specimen_check():
+    with open('14_0076_Follow_Up_Specimen.xlsx', 'rb') as follow_up_specimen_file:
+        follow_up_specimen_workbook = openpyxl.load_workbook(follow_up_specimen_file)
+        follow_up_specimen_worksheet = follow_up_specimen_workbook.active
+        headers_and_fields = get_fields()
+        follow_up_specimen_headers = headers_and_fields['follow_up_specimen']['headers']
+        follow_up_specimen_fields = headers_and_fields['follow_up_specimen']['fields']
+
+        follow_up_specimen_tuple = collections.namedtuple('follow_up_specimen',
+                                                            field_names=follow_up_specimen_headers)
+        follow_up_specimen_data = follow_up_specimen_worksheet.iter_rows()
+        # skip human readable headres follow_up_specimen_file
+        follow_up_specimen_data.next()
+        follow_up_specimen_data_to_check = []
+
+        for row in follow_up_specimen_data:
+            one_subjects_data = follow_up_specimen_tuple(*[cell
+                                                             for cell in row
+                                                             ])
+            follow_up_specimen_data_to_check.append(one_subjects_data)
+
+        statement = "follow_up_specimen_tuple.%s"
+        for follow_up_specimen_tuple in follow_up_specimen_data_to_check:
+            for field in follow_up_specimen_fields:
+                if field[0] == 'simple':
+                    print "simple ran"
+                    simple_field_names = field[1:]
+                    for field_name in simple_field_names:
+                        eval("val.is_blank(" + statement % (field_name,) + ")")
+
+                if field[0] == 'complex without number':
+                    print "complex without number ran"
+                    start_check = field[1]
+                    complex_field_names = field[2:]
+                    # check start condition
+                    if eval("follow_up_specimen_tuple.%s" % start_check) == True:
+                        for field_name in complex_field_names:
+                            eval("val.is_blank(" + statement % (field_name,) + ")")
+
+                if field[0] == 'complex with number':
+                    start_check = field[1]
+                    number_to_check = field[2]
+                    complex_field_names = field[3:]
+                    # check start condition
+                    if eval("follow_up_specimen_tuple.%s" % start_check) == True:
+                        for i in range(1, number_to_check + 1):
+                            for field_name in complex_field_names:
+                                eval("val.is_blank(" + statement % (field_name % i,) + ")")
+
+        follow_up_specimen_workbook.save('14_0076_follow_up_specimen_w_highlighted_erroros.xlsx')
 def main():
-    eligibility_check()
-    demographic_check()
-    symptoms_check()
-    medical_check()
-    enrollment_specimen_check()
+    # eligibility_check()
+    # demographic_check()
+    # symptoms_check()
+    # medical_check()
+    # enrollment_specimen_check()
+    follow_up_assessment_check()
+    follow_up_specimen_check()
 
 if __name__ == '__main__':
     main()
