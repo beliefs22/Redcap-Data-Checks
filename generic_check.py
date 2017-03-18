@@ -59,7 +59,6 @@ def simple_check(field, tuple, statement):
 
 
 def complex_without_number_check(field, tuple, statement):
-
     start_check = field[1]
     complex_field_names = field[2:]
     # check start condition
@@ -69,10 +68,8 @@ def complex_without_number_check(field, tuple, statement):
 
 
 def complex_with_number_check(field, tuple, statement):
-
     start_check = field[1]
-    number_to_check_cell = eval(statement % field[2])
-    number_to_check = number_to_check_cell.value
+    number_to_check = eval(statement % field[2])
     complex_field_names = field[3:]
     # check start condition
     if eval(statement % start_check) == True:
@@ -83,7 +80,6 @@ def complex_with_number_check(field, tuple, statement):
 
 def simple_visit_check(field, tuple, statement, visit_num):
     if visit_num:
-
         simple_field_names = field[1:]
         for field_name in simple_field_names:
             eval("val.is_blank(" + statement % (field_name % visit_num,) + ")")
@@ -91,10 +87,8 @@ def simple_visit_check(field, tuple, statement, visit_num):
 
 def complex_visit_with_number_check(field, tuple, statement, visit_num):
     if visit_num:
-
         start_check = field[1] % visit_num
-        number_to_check_cell = eval(statement % field[2] % visit_num)
-        number_to_check = number_to_check_cell.value
+        number_to_check = eval(statement % field[2] % visit_num)
         if number_to_check == "more than three":
             number_to_check = 3
         complex_field_names = field[3:]
@@ -108,7 +102,6 @@ def complex_visit_with_number_check(field, tuple, statement, visit_num):
 
 def complex_visit_without_number_check(field, tuple, statement, visit_num):
     if visit_num:
-
         start_check = field[1] % visit_num
         complex_field_names = field[2:]
         # check start condition
@@ -119,9 +112,7 @@ def complex_visit_without_number_check(field, tuple, statement, visit_num):
 
 def complex_visit_with_complex_number(field, tuple, statement, visit_num):
     if visit_num:
-
-        number_to_check_cell = eval(statement % (field[1] % visit_num))
-        number_to_check = number_to_check_cell.value
+        number_to_check = eval(statement % (field[1] % visit_num))
         if number_to_check == 'more than three':
             number_to_check = 3
         if number_to_check >= 1:
@@ -172,7 +163,7 @@ def generic_check(check_type, file_to_check, headers, fields):
                     complex_visit_without_number_check(field, tuple, statement, visit_num)
                 if field_type == 'complex visit with complex number':
                     visit_num = tuple.visit_num.value
-                    complex_visit_without_number_check(field, tuple, statement, visit_num)
+                    complex_visit_with_complex_number(field, tuple, statement, visit_num)
 
         data_workbook.save(check_type + "_with_highlight_errors.xlsx")
 
