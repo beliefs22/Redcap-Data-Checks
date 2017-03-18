@@ -4,7 +4,6 @@ import csv
 import validators_ed as val
 
 def get_fields():
-
     with open('Master_Header_File_14_0076.xlsx', 'rb') as master_header_file:
         all_headers = openpyxl.load_workbook(master_header_file)
 
@@ -16,10 +15,14 @@ def get_fields():
         enrollment_specimen_sheet = all_headers.get_sheet_by_name('Enrollment_Specimen')
         follow_up_assessment_sheet = all_headers.get_sheet_by_name('Follow_Up_Assessment')
         follow_up_specimen_sheet = all_headers.get_sheet_by_name('Follow_Up_Specimen')
+        ed_visit_sheet = all_headers.get_sheet_by_name('ED_Visits')
+        ip_visit_sheet = all_headers.get_sheet_by_name('IP_Visits')
 
         all_sheets = {'eligibility': eligibility_sheet, 'demographic': demographic_sheet, 'symptoms': symptom_sheet,
                       'medical': medical_sheet, 'enrollment_specimen': enrollment_specimen_sheet,
-                      'follow_up_assessment' : follow_up_assessment_sheet, 'follow_up_specimen': follow_up_specimen_sheet}
+                      'follow_up_assessment' : follow_up_assessment_sheet,
+                      'follow_up_specimen': follow_up_specimen_sheet, 'ed_visit': ed_visit_sheet,
+                      'ip_visit':ip_visit_sheet}
         headers_and_fields = {}
         for sheet_name, sheet in all_sheets.iteritems():
             data_in_sheet = sheet.iter_rows()
@@ -46,7 +49,125 @@ def test_by_type(cell, test_type):
 
     return test[test_type](cell)
 
+def simple_check(field, tuple, statement):
+    tuple = tuple
+    simple_field_names = field[1:]
+    for field_name in simple_field_names:
+        eval("val.is_blank(" + statement % (field_name,) + ")")
+
+def complex_without_number_check(field, tuple, statement):
+    tuple = tuple
+    start_check = field[1]
+    complex_field_names = field[2:]
+    # check start condition
+    if eval(statement % start_check) == True:
+        for field_name in complex_field_names:
+            eval("val.is_blank(" + statement % (field_name,) + ")")
+
+def complex_with_number_check(field, tuple, statement):
+    tuple = tuple
+    start_check = field[1]
+    number_to_check_cell = eval(field[2])
+    number_to_check = number_to_check_cell.value
+    complex_field_names = field[3:]
+    # check start condition
+    if eval(statement % start_check) == True:
+        for i in range(1, number_to_check + 1):
+            for field_name in complex_field_names:
+                eval("val.is_blank(" + statement % (field_name % i,) + ")")
+
+def simple_visit_check(field, tuple, statement, visit_num):
+    tuple = tuple
+    simple_field_names = field[1:]
+    for field_name in simple_field_names:
+        eval("val.is_blank(" + statement % (field_name % visit_num,) + ")")
+    pass
+
+def complex_visit_with_number_check(field, tuple, statement, visit_num):
+    tuple = tuple
+    start_check = field[1] % visit_num
+    number_to_check_cell = eval(statement % field[2] % visit_num)
+    number_to_check = number_to_check_cell.value
+    if number_to_check == "more than three":
+        number_to_check = 3
+    complex_field_names = field[3:]
+    # check start condition
+    if number_to_check >= 1:
+        if eval(statement % start_check) == True:
+            for i in range(1, number_to_check + 1):
+                for field_name in complex_field_names:
+                    eval("val.is_blank(" + statement % (field_name % (visit_num, i) + ")"))
+
+
+def complex_visit_without_number_check(field, tuple, statement, visit_num):
+    tuple = tuple
+    start_check = field[1] % visit_num
+    complex_field_names = field[2:]
+    # check start condition
+    if eval(statement % start_check) == True:
+        for field_name in complex_field_names:
+            eval("val.is_blank(" + statement % (field_name % visit_num,) + ")")
+
+def complex_visit_with_complex_number(field, tuple, statement, visit_num):
+    tuple = tuple
+    number_to_check_cell = eval(statement % (field[1] % visit_num))
+    number_to_check = number_to_check_cell.value
+    if number_to_check == 'more than three':
+        number_to_check = 3
+    if number_to_check >= 1:
+        for i in range(1, number_to_check + 1):
+            start_check = field[2] % (visit_num, i)
+            complex_field_names = field[3:]
+            # check start condition
+            if eval(statement % start_check) == True:
+                for field_name in complex_field_names:
+                    eval("val.is_blank(" + statement % (field_name % (visit_num, i) + ")"))
+
+
+def generic_check(check_type, file_to_check, headers, fields):
+    print "startin %s check" % check_type
+    with open(file_to_check,'rb') as datafile:
+        data_workbook = openpyxl.load_workbook(datafile)
+        data_worksheet = data_workbook.active
+        data_headers = headers
+        data_fields = fields
+        data_tuple = collections.namedtuple(check_type, field_names=fields)
+        data = data_worksheet.iter_rows()
+        #skip human readable headers in data file
+        data.next()
+        data_to_check = []
+        for row in data:
+            one_subjects_data = data_tuple(*[cell for cell in row
+                                             ])
+            data_to_check.append(one_subjects_data)
+
+        statement = check_type + "_tuple.%s"
+        for tuple in data_to_check:
+            print tuple.id.value
+            for field in data_fields:
+                field_type = field[0]
+                if field_type == 'simple:':
+                    simple_check(field, tuple)
+                if field_type == 'complex with number':
+                    complex_with_number_check(field, tuple, statement)
+                if field_type == 'complex without number':
+                    complex_without_number_check(field, tuple, statement)
+                if field_type == 'simple visit without number':
+                    visit_num = tuple.visit_num.value
+                    simple_visit_check(field, tuple, statement, visit_num)
+                if field_type == 'complex visit with number':
+                    visit_num = tuple.visit_num.value
+                    complex_visit_with_number_check(field, tuple, statement, visit_num)
+                if field_type == 'complex visit without number':
+                    visit_num = tuple.visit_num.value
+                    complex_visit_without_number_check(field, tuple, statement, visit_num)
+                if field_type == 'complex visit with complex number':
+                    visit_num = tuple.visit_num.value
+                    complex_visit_without_number_check(field, tuple, statement, visit_num)
+
+        data_workbook.save(check_type + "_with_highlight_errors")
 def eligibility_check():
+    print "starting eligibility check"
     with open('14_0076_Eligibility.xlsx', 'rb') as eligibility_file:
         eligibility_workbook = openpyxl.load_workbook(eligibility_file)
         eligibility_worksheet = eligibility_workbook.active
@@ -68,28 +189,30 @@ def eligibility_check():
 
         statement = "eligibility_tuple.%s"
         for eligibility_tuple in eligibility_data_to_check:
+            print eligibility_tuple.id.value
             for field in eligibility_fields:
                 if field[0] == 'simple':
-                    print "simple ran"
+                    # print "simple ran"
                     simple_field_names = field[1:]
                     for field_name in simple_field_names:
                         eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex without number':
-                    print "complex without number ran"
+                    # print "complex without number ran"
                     start_check = field[1]
                     complex_field_names = field[2:]
                     #check start condition
-                    if eval("eligibility_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for field_name in complex_field_names:
                             eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex with number':
                     start_check = field[1]
-                    number_to_check = field[2]
+                    number_to_check_cell = eval(field[2])
+                    number_to_check = number_to_check_cell.value
                     complex_field_names = field[3:]
                     #check start condition
-                    if eval("eligibility_tuple.%s" % start_check) == True:
+                    if eval(statement% start_check) == True:
                         for i in range(1, number_to_check + 1):
                             for field_name in complex_field_names:
                                 eval("val.is_blank(" + statement % (field_name % i,) + ")")
@@ -97,6 +220,7 @@ def eligibility_check():
         eligibility_workbook.save('14_0076_Eligibility_w_highlighted_erroros.xlsx')
 
 def demographic_check():
+    print "starting demographic check"
     with open('14_0076_Demographic.xlsx', 'rb') as demographic_file:
         demographic_workbook = openpyxl.load_workbook(demographic_file)
         demographic_worksheet = demographic_workbook.active
@@ -118,35 +242,38 @@ def demographic_check():
 
         statement = "demographic_tuple.%s"
         for demographic_tuple in demographic_data_to_check:
+            print demographic_tuple.id.value
             for field in demographic_fields:
                 if field[0] == 'simple':
-                    print "simple ran"
+                    # print "simple ran"
                     simple_field_names = field[1:]
                     for field_name in simple_field_names:
                         eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex without number':
-                    print "complex without number ran"
+                    # print "complex without number ran"
                     start_check = field[1]
                     complex_field_names = field[2:]
                     #check start condition
-                    if eval("demographic_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for field_name in complex_field_names:
                             eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex with number':
                     start_check = field[1]
-                    number_to_check = field[2]
+                    number_to_check_cell = eval(field[2])
+                    number_to_check = number_to_check_cell.value
                     complex_field_names = field[3:]
                     #check start condition
-                    if eval("demographic_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for i in range(1, number_to_check + 1):
                             for field_name in complex_field_names:
                                 eval("val.is_blank(" + statement % (field_name % i,) + ")")
 
         demographic_workbook.save('14_0076_demographic_w_highlighted_erroros.xlsx')
-        
+
 def symptoms_check():
+    print "starting symptoms check"
     with open('14_0076_Symptoms.xlsx', 'rb') as symptoms_file:
         symptoms_workbook = openpyxl.load_workbook(symptoms_file)
         symptoms_worksheet = symptoms_workbook.active
@@ -168,15 +295,16 @@ def symptoms_check():
 
         statement = "symptoms_tuple.%s"
         for symptoms_tuple in symptoms_data_to_check:
+            print symptoms_tuple.id.value
             for field in symptoms_fields:
                 if field[0] == 'simple':
-                    print "simple ran"
+                    # print "simple ran"
                     simple_field_names = field[1:]
                     for field_name in simple_field_names:
                         eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex without number':
-                    print "complex without number ran"
+                    # print "complex without number ran"
                     start_check = field[1]
                     complex_field_names = field[2:]
                     #check start condition
@@ -186,7 +314,8 @@ def symptoms_check():
 
                 if field[0] == 'complex with number':
                     start_check = field[1]
-                    number_to_check = field[2]
+                    number_to_check_cell = eval(field[2])
+                    number_to_check = number_to_check_cell.value
                     complex_field_names = field[3:]
                     #check start condition
                     if eval("symptoms_tuple.%s" % start_check) == True:
@@ -197,6 +326,7 @@ def symptoms_check():
         symptoms_workbook.save('14_0076_symptoms_w_highlighted_erroros.xlsx')
 
 def medical_check():
+    print "starting medical check"
     with open('14_0076_medical.xlsx', 'rb') as medical_file:
         medical_workbook = openpyxl.load_workbook(medical_file)
         medical_worksheet = medical_workbook.active
@@ -218,28 +348,30 @@ def medical_check():
 
         statement = "medical_tuple.%s"
         for medical_tuple in medical_data_to_check:
+            print medical_tuple.id.value
             for field in medical_fields:
                 if field[0] == 'simple':
-                    print "simple ran"
+                    # print "simple ran"
                     simple_field_names = field[1:]
                     for field_name in simple_field_names:
                         eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex without number':
-                    print "complex without number ran"
+                    # print "complex without number ran"
                     start_check = field[1]
                     complex_field_names = field[2:]
                     #check start condition
-                    if eval("medical_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for field_name in complex_field_names:
                             eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex with number':
                     start_check = field[1]
-                    number_to_check = field[2]
+                    number_to_check_cell = eval(statement % field[2])
+                    number_to_check = number_to_check_cell.value
                     complex_field_names = field[3:]
                     #check start condition
-                    if eval("medical_tuple.%s" % start_check) == True:
+                    if eval(statement% start_check) == True:
                         for i in range(1, number_to_check + 1):
                             for field_name in complex_field_names:
                                 eval("val.is_blank(" + statement % (field_name % i,) + ")")
@@ -247,6 +379,7 @@ def medical_check():
         medical_workbook.save('14_0076_medical_w_highlighted_erroros.xlsx')
 
 def enrollment_specimen_check():
+    print "starting enrollment specimen check"
     with open('14_0076_Enrollment_Specimen.xlsx', 'rb') as enrollment_specimen_file:
         enrollment_specimen_workbook = openpyxl.load_workbook(enrollment_specimen_file)
         enrollment_specimen_worksheet = enrollment_specimen_workbook.active
@@ -268,28 +401,30 @@ def enrollment_specimen_check():
 
         statement = "enrollment_specimen_tuple.%s"
         for enrollment_specimen_tuple in enrollment_specimen_data_to_check:
+            print enrollment_specimen_tuple.id.value
             for field in enrollment_specimen_fields:
                 if field[0] == 'simple':
-                    print "simple ran"
+                    # print "simple ran"
                     simple_field_names = field[1:]
                     for field_name in simple_field_names:
                         eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex without number':
-                    print "complex without number ran"
+                    # print "complex without number ran"
                     start_check = field[1]
                     complex_field_names = field[2:]
                     #check start condition
-                    if eval("enrollment_specimen_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for field_name in complex_field_names:
                             eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex with number':
                     start_check = field[1]
-                    number_to_check = field[2]
+                    number_to_check_cell = eval(field[2])
+                    number_to_check = number_to_check_cell.value
                     complex_field_names = field[3:]
                     #check start condition
-                    if eval("enrollment_specimen_tuple.%s" % start_check) == True:
+                    if eval(statement% start_check) == True:
                         for i in range(1, number_to_check + 1):
                             for field_name in complex_field_names:
                                 eval("val.is_blank(" + statement % (field_name % i,) + ")")
@@ -297,6 +432,7 @@ def enrollment_specimen_check():
         enrollment_specimen_workbook.save('14_0076_enrollment_specimen_w_highlighted_erroros.xlsx')
 
 def follow_up_assessment_check():
+    print "starting follow_up assessment check"
     with open('14_0076_Follow_Up_Assessment.xlsx', 'rb') as follow_up_assessment_file:
         follow_up_assessment_workbook = openpyxl.load_workbook(follow_up_assessment_file)
         follow_up_assessment_worksheet = follow_up_assessment_workbook.active
@@ -318,28 +454,30 @@ def follow_up_assessment_check():
 
         statement = "follow_up_assessment_tuple.%s"
         for follow_up_assessment_tuple in follow_up_assessment_data_to_check:
+            print follow_up_assessment_tuple.id.value
             for field in follow_up_assessment_fields:
                 if field[0] == 'simple':
-                    print "simple ran"
+                    # print "simple ran"
                     simple_field_names = field[1:]
                     for field_name in simple_field_names:
                         eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex without number':
-                    print "complex without number ran"
+                    # print "complex without number ran"
                     start_check = field[1]
                     complex_field_names = field[2:]
                     #check start condition
-                    if eval("follow_up_assessment_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for field_name in complex_field_names:
                             eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex with number':
                     start_check = field[1]
-                    number_to_check = field[2]
+                    number_to_check_cell = eval(statement % field[2])
+                    number_to_check = number_to_check_cell.value
                     complex_field_names = field[3:]
                     #check start condition
-                    if eval("follow_up_assessment_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for i in range(1, number_to_check + 1):
                             for field_name in complex_field_names:
                                 eval("val.is_blank(" + statement % (field_name % i,) + ")")
@@ -348,6 +486,7 @@ def follow_up_assessment_check():
 
 
 def follow_up_specimen_check():
+    print "starting follow_up specimen check"
     with open('14_0076_Follow_Up_Specimen.xlsx', 'rb') as follow_up_specimen_file:
         follow_up_specimen_workbook = openpyxl.load_workbook(follow_up_specimen_file)
         follow_up_specimen_worksheet = follow_up_specimen_workbook.active
@@ -370,41 +509,215 @@ def follow_up_specimen_check():
 
         statement = "follow_up_specimen_tuple.%s"
         for follow_up_specimen_tuple in follow_up_specimen_data_to_check:
+            print follow_up_specimen_tuple.id.value
             for field in follow_up_specimen_fields:
                 if field[0] == 'simple':
-                    print "simple ran"
+                    # print "simple ran"
                     simple_field_names = field[1:]
                     for field_name in simple_field_names:
                         eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex without number':
-                    print "complex without number ran"
+                    # print "complex without number ran"
                     start_check = field[1]
                     complex_field_names = field[2:]
                     # check start condition
-                    if eval("follow_up_specimen_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for field_name in complex_field_names:
                             eval("val.is_blank(" + statement % (field_name,) + ")")
 
                 if field[0] == 'complex with number':
                     start_check = field[1]
-                    number_to_check = field[2]
+                    number_to_check_cell = statement % field[2]
+                    number_to_check = number_to_check_cell.value
                     complex_field_names = field[3:]
                     # check start condition
-                    if eval("follow_up_specimen_tuple.%s" % start_check) == True:
+                    if eval(statement % start_check) == True:
                         for i in range(1, number_to_check + 1):
                             for field_name in complex_field_names:
                                 eval("val.is_blank(" + statement % (field_name % i,) + ")")
 
         follow_up_specimen_workbook.save('14_0076_follow_up_specimen_w_highlighted_erroros.xlsx')
+        
+
+def ed_visit_check():
+    print "start ed visit check"
+    with open('14_0076_Ed_Visit.xlsx', 'rb') as ed_visit_file:
+        ed_visit_workbook = openpyxl.load_workbook(ed_visit_file)
+        ed_visit_worksheet = ed_visit_workbook.active
+        headers_and_fields = get_fields()
+        ed_visit_headers = headers_and_fields['ed_visit']['headers']
+        ed_visit_fields = headers_and_fields['ed_visit']['fields']
+
+        ed_visit_tuple = collections.namedtuple('ed_visit',
+                                                field_names=ed_visit_headers)
+        ed_visit_data = ed_visit_worksheet.iter_rows()
+        # skip human readable headres ed_visit_file
+        ed_visit_data.next()
+        ed_visit_data_to_check = []
+
+        for row in ed_visit_data:
+            one_subjects_data = ed_visit_tuple(*[cell
+                                                 for cell in row
+                                                 ])
+            ed_visit_data_to_check.append(one_subjects_data)
+
+        statement = "ed_visit_tuple.%s"
+        for ed_visit_tuple in ed_visit_data_to_check:
+            print ed_visit_tuple.id.value
+            # check for ed visit number
+            ed_visit_num = ed_visit_tuple.visit_num.value
+            if ed_visit_num >= 1:
+                for i in range(1, ed_visit_num + 1):
+                    for field in ed_visit_fields:
+                        if field[0] == 'simple':
+                            # print "simple ran"
+                            simple_field_names = field[1:]
+                            for field_name in simple_field_names:
+                                eval("val.is_blank(" + statement % (field_name,) + ")")
+
+                        if field[0] == 'simple visit without number':
+                            # print "simple visit ran"
+                            simple_field_names = field[1:]
+                            for field_name in simple_field_names:
+                                eval("val.is_blank(" + statement % (field_name % ed_visit_num,) + ")")
+
+                        if field[0] == 'complex visit without number':
+                            # print "complex visit without number ran"
+                            start_check = field[1] % ed_visit_num
+                            complex_field_names = field[2:]
+                            # check start condition
+                            if eval(statement % start_check) == True:
+                                for field_name in complex_field_names:
+                                    eval("val.is_blank(" + statement % (field_name % ed_visit_num,) + ")")
+
+                        if field[0] == 'complex visit with number':
+                            # print "complex visit with number ran"
+                            start_check = field[1] % ed_visit_num
+                            number_to_check_cell = eval(statement % field[2] % ed_visit_num)
+                            number_to_check = number_to_check_cell.value
+                            if number_to_check == "more than three":
+                                number_to_check = 3
+                            complex_field_names = field[3:]
+                            # check start condition
+                            if number_to_check >= 1:
+                                if eval(statement % start_check) == True:
+                                    for i in range(1, number_to_check + 1):
+                                        for field_name in complex_field_names:
+                                            eval("val.is_blank(" + statement % (field_name % (ed_visit_num, i) + ")"))
+
+                        if field[0] == 'complex visit with complex number':
+                            # print "complex visit with complex number ran"
+                            number_to_check_cell = eval(statement % (field[1] % ed_visit_num))
+                            number_to_check = number_to_check_cell.value
+                            if number_to_check == 'more than three':
+                                number_to_check = 3
+                            if number_to_check >= 1:
+                                for i in range(1, number_to_check + 1):
+                                    start_check = field[2] % (ed_visit_num, i)
+                                    complex_field_names = field[3:]
+                                    # check start condition
+                                    if eval(statement % start_check) == True:
+                                        for field_name in complex_field_names:
+                                            eval("val.is_blank(" + statement % (field_name % (ed_visit_num,i) + ")"))
+
+        ed_visit_workbook.save('14_0076_ed_visit_w_highlighted_erroros.xlsx')
+
+
+def ip_visit_check():
+    print "start IP visit check"
+    with open('14_0076_IP_Visit.xlsx', 'rb') as ip_visit_file:
+        ip_visit_workbook = openpyxl.load_workbook(ip_visit_file)
+        ip_visit_worksheet = ip_visit_workbook.active
+        headers_and_fields = get_fields()
+        ip_visit_headers = headers_and_fields['ip_visit']['headers']
+        ip_visit_fields = headers_and_fields['ip_visit']['fields']
+
+        ip_visit_tuple = collections.namedtuple('ip_visit',
+                                                field_names=ip_visit_headers)
+        ip_visit_data = ip_visit_worksheet.iter_rows()
+        # skip human readable headres ip_visit_file
+        ip_visit_data.next()
+        ip_visit_data_to_check = []
+
+        for row in ip_visit_data:
+            one_subjects_data = ip_visit_tuple(*[cell
+                                                 for cell in row
+                                                 ])
+            ip_visit_data_to_check.append(one_subjects_data)
+
+        statement = "ip_visit_tuple.%s"
+        for ip_visit_tuple in ip_visit_data_to_check:
+            print ip_visit_tuple.id.value
+            # check for ed visit number
+            ip_visit_num = ip_visit_tuple.visit_num.value
+            if ip_visit_num >= 1:
+                for i in range(1, ip_visit_num + 1):
+                    for field in ip_visit_fields:
+                        if field[0] == 'simple':
+                            # print "simple ran"
+                            simple_field_names = field[1:]
+                            for field_name in simple_field_names:
+                                eval("val.is_blank(" + statement % (field_name,) + ")")
+
+                        if field[0] == 'simple visit without number':
+                            # print "simple visit ran"
+                            simple_field_names = field[1:]
+                            for field_name in simple_field_names:
+                                eval("val.is_blank(" + statement % (field_name % ip_visit_num,) + ")")
+
+                        if field[0] == 'complex visit without number':
+                            # print "complex visit without number ran"
+                            start_check = field[1] % ip_visit_num
+                            complex_field_names = field[2:]
+                            # check start condition
+                            if eval(statement % start_check) == True:
+                                for field_name in complex_field_names:
+                                    eval("val.is_blank(" + statement % (field_name % ip_visit_num,) + ")")
+
+                        if field[0] == 'complex visit with number':
+                            # print "complex visit with number ran"
+                            start_check = field[1] % ip_visit_num
+                            number_to_check_cell = eval(statement % field[2] % ip_visit_num)
+                            number_to_check = number_to_check_cell.value
+                            if number_to_check == "more than three":
+                                number_to_check = 3
+                            complex_field_names = field[3:]
+                            # check start condition
+                            if number_to_check >= 1:
+                                if eval(statement % start_check) == True:
+                                    for i in range(1, number_to_check + 1):
+                                        for field_name in complex_field_names:
+                                            eval("val.is_blank(" + statement % (field_name % (ip_visit_num, i) + ")"))
+
+                        if field[0] == 'complex visit with complex number':
+                            # print "complex visit with complex number ran"
+                            number_to_check_cell = eval(statement % (field[1] % ip_visit_num))
+                            number_to_check = number_to_check_cell.value
+                            if number_to_check == 'more than three':
+                                number_to_check = 3
+                            if number_to_check >= 1:
+                                for i in range(1, number_to_check + 1):
+                                    start_check = field[2] % (ip_visit_num, i)
+                                    complex_field_names = field[3:]
+                                    # check start condition
+                                    if eval(statement % start_check) == True:
+                                        for field_name in complex_field_names:
+                                            eval("val.is_blank(" + statement % (field_name % (ip_visit_num,i) + ")"))
+
+        ip_visit_workbook.save('14_0076_ip_visit_w_highlighted_erroros.xlsx')
+
+
 def main():
-    # eligibility_check()
-    # demographic_check()
-    # symptoms_check()
-    # medical_check()
-    # enrollment_specimen_check()
+    eligibility_check()
+    demographic_check()
+    symptoms_check()
+    medical_check()
+    enrollment_specimen_check()
     follow_up_assessment_check()
     follow_up_specimen_check()
+    ed_visit_check()
+    ip_visit_check()
 
 if __name__ == '__main__':
     main()
