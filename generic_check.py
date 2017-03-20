@@ -52,22 +52,30 @@ def test_by_type(cell, test_type):
 
 
 def simple_check(field, tuple, statement):
-
+    errors = []
     simple_field_names = field[1:]
     for field_name in simple_field_names:
-        eval("val.is_blank(" + statement % (field_name,) + ")")
+        check = eval("val.is_blank(" + statement % (field_name,) + ")")
+        if check != "":
+            errors.append(check)
+    return errors
 
 
 def complex_without_number_check(field, tuple, statement):
+    errors = []
     start_check = field[1]
     complex_field_names = field[2:]
     # check start condition
     if eval(statement % start_check) == True:
         for field_name in complex_field_names:
-            eval("val.is_blank(" + statement % (field_name,) + ")")
+            check = eval("val.is_blank(" + statement % (field_name,) + ")")
+            if check != "":
+                errors.append(check)
+    return errors
 
 
 def complex_with_number_check(field, tuple, statement):
+    errors =  []
     start_check = field[1]
     number_to_check = eval(statement % field[2])
     complex_field_names = field[3:]
@@ -75,17 +83,25 @@ def complex_with_number_check(field, tuple, statement):
     if eval(statement % start_check) == True:
         for i in range(1, number_to_check + 1):
             for field_name in complex_field_names:
-                eval("val.is_blank(" + statement % (field_name % i,) + ")")
+                check = eval("val.is_blank(" + statement % (field_name % i,) + ")")
+                if check != "":
+                    errors.append(check)
+    return errors
 
 
 def simple_visit_check(field, tuple, statement, visit_num):
+    errors = []
     if visit_num:
         simple_field_names = field[1:]
         for field_name in simple_field_names:
-            eval("val.is_blank(" + statement % (field_name % visit_num,) + ")")
+            check = eval("val.is_blank(" + statement % (field_name % visit_num,) + ")")
+            if check != "":
+                errors.append(check)
+    return errors
 
 
 def complex_visit_with_number_check(field, tuple, statement, visit_num):
+    errors = []
     if visit_num:
         start_check = field[1] % visit_num
         number_to_check = eval(statement % field[2] % visit_num)
@@ -97,20 +113,28 @@ def complex_visit_with_number_check(field, tuple, statement, visit_num):
             if eval(statement % start_check) == True:
                 for i in range(1, number_to_check + 1):
                     for field_name in complex_field_names:
-                        eval("val.is_blank(" + statement % (field_name % (visit_num, i) + ")"))
+                        check = eval("val.is_blank(" + statement % (field_name % (visit_num, i) + ")"))
+                        if check != "":
+                            errors.append(check)
+    return errors
 
 
 def complex_visit_without_number_check(field, tuple, statement, visit_num):
+    errors = []
     if visit_num:
         start_check = field[1] % visit_num
         complex_field_names = field[2:]
         # check start condition
         if eval(statement % start_check) == True:
             for field_name in complex_field_names:
-                eval("val.is_blank(" + statement % (field_name % visit_num,) + ")")
+                check = eval("val.is_blank(" + statement % (field_name % visit_num,) + ")")
+                if check != "":
+                    errors.append(check)
+    return errors
 
 
 def complex_visit_with_complex_number(field, tuple, statement, visit_num):
+    errors = []
     if visit_num:
         number_to_check = eval(statement % (field[1] % visit_num))
         if number_to_check == 'more than three':
@@ -122,7 +146,10 @@ def complex_visit_with_complex_number(field, tuple, statement, visit_num):
                 # check start condition
                 if eval(statement % start_check) == True:
                     for field_name in complex_field_names:
-                        eval("val.is_blank(" + statement % (field_name % (visit_num, i) + ")"))
+                        check = eval("val.is_blank(" + statement % (field_name % (visit_num, i) + ")"))
+                        if check != "":
+                            errors.append(check)
+    return errors
 
 
 def generic_check(check_type, file_to_check, headers, fields):
@@ -143,29 +170,31 @@ def generic_check(check_type, file_to_check, headers, fields):
             data_to_check.append(one_subjects_data)
 
         statement = "tuple.%s"
+        errors = collections.defaultdict(list)
         for tuple in data_to_check:
             for field in data_fields:
                 field_type = field[0]
                 if field_type == 'simple:':
-                    simple_check(field, tuple, statement)
+                    errors[tuple.id.value].append(simple_check(field, tuple, statement))
                 if field_type == 'complex with number':
-                    complex_with_number_check(field, tuple, statement)
+                    errors[tuple.id.value].append(complex_with_number_check(field, tuple, statement))
                 if field_type == 'complex without number':
-                    complex_without_number_check(field, tuple, statement)
+                    errors[tuple.id.value].append(complex_without_number_check(field, tuple, statement))
                 if field_type == 'simple visit without number':
                     visit_num = tuple.visit_num.value
-                    simple_visit_check(field, tuple, statement, visit_num)
+                    errors[tuple.id.value].append(simple_visit_check(field, tuple, statement, visit_num))
                 if field_type == 'complex visit with number':
                     visit_num = tuple.visit_num.value
-                    complex_visit_with_number_check(field, tuple, statement, visit_num)
+                    errors[tuple.id.value].append(complex_visit_with_number_check(field, tuple, statement, visit_num))
                 if field_type == 'complex visit without number':
                     visit_num = tuple.visit_num.value
-                    complex_visit_without_number_check(field, tuple, statement, visit_num)
+                    errors[tuple.id.value].append(complex_visit_without_number_check(field, tuple, statement, visit_num))
                 if field_type == 'complex visit with complex number':
                     visit_num = tuple.visit_num.value
-                    complex_visit_with_complex_number(field, tuple, statement, visit_num)
+                    errors[tuple.id.value].append(complex_visit_with_complex_number(field, tuple, statement, visit_num))
 
         data_workbook.save(check_type + "_with_highlight_errors.xlsx")
+        return {subject_id:data for subject_id, data in errors.iteritems() if data != []}
 
 
 def main():
@@ -180,13 +209,20 @@ def main():
                      'follow_up_specimen': [all_fields['follow_up_specimen'],'14_0076_Follow_Up_Specimen.xlsx'],
                      'ed_visit' : [all_fields['ed_visit'],'14_0076_ED_Visit.xlsx'],
                      'ip_visit': [all_fields['ip_visit'],'14_0076_IP_Visit.xlsx']}
-
+    errors = []
     for check_type, file_info in files_to_test.iteritems():
         check_type = check_type
         file_to_check = file_info[1]
         headers = file_info[0]['headers']
         fields = file_info[0]['fields']
-        generic_check(check_type,file_to_check,headers,fields)
+        errors.append(generic_check(check_type,file_to_check,headers,fields))
+    print len(errors)
+    for item in errors:
+        for key, value in item.iteritems():
+            value = [item for item in value if item != []]
+            if value:
+                print key, "--", value
+
 
 
 
