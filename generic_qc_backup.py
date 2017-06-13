@@ -3,8 +3,8 @@ import collections
 import csv
 # import generic_validators as val
 
-def get_fields(protocol):
-    with open('{}_raw_Data.xlsx'.format(protocol), 'rb') as raw_header_file,open('{}_labeled_data.xlsx'.format(protocol), 'rb') as labeled_header_file:
+def get_fields(raw_filename, labeled_filename, masterfile):
+    with open('14_0076_raw_Data.xlsx', 'rb') as raw_header_file,open('14_0076_labeled_data.xlsx', 'rb') as labeled_header_file:
         raw_header_book = openpyxl.load_workbook(raw_header_file)
         labeled_header_book = openpyxl.load_workbook(labeled_header_file)
         raw_header_sheet = raw_header_book.active
@@ -14,26 +14,35 @@ def get_fields(protocol):
         machine_headers = [unicode(cell.value)
                            for cell in raw_header_data.next()
                            ]
-        #replace mispelled headers
-        machine_headers[machine_headers.index('curmedsteriod1dose')] = 'curmedsteroid1dose'
-        machine_headers = [header.replace('typingsp','typsp')
-                           for header in machine_headers
-                           ]
         human_headers = [unicode(cell.value)
                          for cell in labeled_header_data.next()
                          ]
         headers = collections.OrderedDict()
         for machine_header, human_header in zip(machine_headers, human_headers):
             headers[machine_header] = human_header
-        with open('Master_Header_File_{}.xlsx'.format(protocol), 'rb') as master_header_file:
+        with open('Master_Header_File_14_0076_w_form_names.xlsx', 'rb') as master_header_file:
             all_headers = openpyxl.load_workbook(master_header_file)
-            sheet_names = all_headers.get_sheet_names()
-            all_sheets = {sheet_name.lower() : all_headers.get_sheet_by_name(sheet_name)
-                          for sheet_name in sheet_names}
+
+            #Get sheets for each file type
+            eligibility_sheet = all_headers.get_sheet_by_name('Eligibility')
+            demographic_sheet = all_headers.get_sheet_by_name('Demographic')
+            symptom_sheet = all_headers.get_sheet_by_name('Symptoms')
+            medical_sheet = all_headers.get_sheet_by_name('Medical')
+            enrollment_specimen_sheet = all_headers.get_sheet_by_name('Enrollment_Specimen')
+            follow_up_assessment_sheet = all_headers.get_sheet_by_name('Follow_Up_Assessment')
+            follow_up_specimen_sheet = all_headers.get_sheet_by_name('Follow_Up_Specimen')
+            ed_visit_sheet = all_headers.get_sheet_by_name('ED_Visits')
+            ip_visit_sheet = all_headers.get_sheet_by_name('IP_Visits')
+
+            all_sheets = {'eligibility': eligibility_sheet, 'demographic': demographic_sheet, 'symptoms': symptom_sheet,
+                          'medical': medical_sheet, 'enrollment_specimen': enrollment_specimen_sheet,
+                          'follow_up_assessment' : follow_up_assessment_sheet,
+                          'follow_up_specimen': follow_up_specimen_sheet, 'ed_visit': ed_visit_sheet,
+                          'ip_visit':ip_visit_sheet}
             headers_fields_forms = {}
             for sheet_name, sheet in all_sheets.iteritems():
                 data_in_sheet = sheet.iter_rows()
-                #Get machine and human headers from sheet
+                #Skip first two rows as they contain data on headers not needed now
                 form_machine_headers = [unicode(cell.value)
                                         for cell in data_in_sheet.next()
                                         ]
@@ -87,7 +96,11 @@ def complex_without_number_check(field, tuple, statement):
     complex_field_names = field[2:]
     # check start condition
     if eval(statement % start_check) == True:
+        if tuple.id == '01-11-A-0308':
+            print tuple.id, statement % start_check
         for field_name in complex_field_names:
+            if tuple.id == '01-11-A-0308':
+                print field_name, statement % field_name, eval(statement%field_name)
             error_found = eval(statement % (field_name,))== ""
             if error_found:
                 errors.append(field_name)
@@ -101,8 +114,6 @@ def complex_with_number_check(field, tuple, statement):
     complex_field_names = field[3:]
     # check start condition
     if number_to_check:
-        if number_to_check == 'more than three':
-            number_to_check = 3
         number_to_check = int(number_to_check)
         if eval(statement % start_check) == True:
             for i in range(1, number_to_check + 1):
@@ -226,11 +237,9 @@ def generic_check(check_type, file_to_check, headers, fields, forms):
         data_to_check = []
         for row in data_reader:
             if row:
-                for_tuple = [cell for cell in row]
-                one_subjects_data = data_tuple(*for_tuple)
-                form_name = forms['id']
-                complete = eval('one_subjects_data.{}'.format(form_name + "_complete"))
-                if complete in ('Unverified', 'Complete'):
+                if row[-1] in ('Unverified', 'Complete'):
+                    for_tuple = [cell for cell in row]
+                    one_subjects_data = data_tuple(*for_tuple)
                     data_to_check.append(one_subjects_data)
 
         statement = "tuple.%s"
@@ -279,12 +288,6 @@ def generic_check(check_type, file_to_check, headers, fields, forms):
                             errors.append([tuple.id , form_name, question_info, redcap_label, actual_value, error_message])
                 if field_type == 'simple visit without number':
                     visit_num = eval("tuple.{}".format(visit_number_locations[check_type]))
-                    if check_type == 'ip_visit':
-                        if int(visit_num) > 3:
-                            visit_num = 3
-                    if check_type == 'ed_visit':
-                        if int(visit_num) > 4:
-                            visit_num = 4
                     error_found = simple_visit_check(field, tuple, statement, visit_num)
                     if error_found:
                         for error in error_found:
@@ -295,12 +298,6 @@ def generic_check(check_type, file_to_check, headers, fields, forms):
                             errors.append([tuple.id , form_name, question_info, redcap_label, actual_value, error_message])
                 if field_type == 'complex visit with number':
                     visit_num = eval("tuple.{}".format(visit_number_locations[check_type]))
-                    if check_type == 'ip_visit':
-                        if int(visit_num) > 3:
-                            visit_num = 3
-                    if check_type == 'ed_visit':
-                        if int(visit_num) > 4:
-                            visit_num = 4
                     error_found = complex_visit_with_number_check(field, tuple, statement, visit_num)
                     if error_found:
                         for error in error_found:
@@ -311,12 +308,6 @@ def generic_check(check_type, file_to_check, headers, fields, forms):
                             errors.append([tuple.id , form_name, question_info, redcap_label, actual_value, error_message])
                 if field_type == 'complex visit without number':
                     visit_num = eval("tuple.{}".format(visit_number_locations[check_type]))
-                    if check_type == 'ip_visit':
-                        if int(visit_num) > 3:
-                            visit_num = 3
-                    if check_type == 'ed_visit':
-                        if int(visit_num) > 4:
-                            visit_num = 4
                     error_found = complex_visit_without_number_check(field, tuple, statement, visit_num)
                     if error_found:
                         for error in error_found:
@@ -327,12 +318,6 @@ def generic_check(check_type, file_to_check, headers, fields, forms):
                             errors.append([tuple.id , form_name, question_info, redcap_label, actual_value, error_message])
                 if field_type == 'complex visit with complex number':
                     visit_num = eval("tuple.{}".format(visit_number_locations[check_type]))
-                    if check_type == 'ip_visit':
-                        if int(visit_num) > 3:
-                            visit_num = 3
-                    if check_type == 'ed_visit':
-                        if int(visit_num) > 4:
-                            visit_num = 4
                     error_found = complex_visit_with_complex_number(field, tuple, statement, visit_num)
                     if error_found:
                         for error in error_found:
@@ -346,30 +331,26 @@ def generic_check(check_type, file_to_check, headers, fields, forms):
     return all_found_errors
 
 def main():
-    protocols = ['14_0076', '15_0103']
-    for protocol in protocols:
-        fields = get_fields(protocol)
-        all_found_errors = list()
-        for check_type, headers_fields_forms in fields.iteritems():
-            filename = "{}_labeled_data.csv".format(protocol)
-            print filename
-            headers = headers_fields_forms['headers']
-            fields = headers_fields_forms['fields']
-            forms = headers_fields_forms['forms']
-            # print fields
-            errors = generic_check(check_type,filename,headers,fields, forms)
-            if errors:
-                all_found_errors.append(errors)
-        with open('{}_errors.csv'.format(protocol), 'wb') as error_file:
-            csvwriter = csv.writer(error_file)
-            csv_headers = ['Subject ID', 'Form Name', 'CRF Question Location', 'RedCap Label', 'Current Value', 'Details']
-            csvwriter.writerow(csv_headers)
-            for item in all_found_errors:
-                for subjects_errors in item:
-                    for single_error in subjects_errors:
-                        single_error = [item.encode('ascii','ignore')
-                                        for item in single_error]
-                        csvwriter.writerow(single_error)
+    fields = get_fields()
+    all_found_errors = list()
+    for check_type, headers_fields_forms in fields.iteritems():
+        filename = "14_0076_labeled_data.csv"
+        print filename
+        headers = headers_fields_forms['headers']
+        fields = headers_fields_forms['fields']
+        forms = headers_fields_forms['forms']
+        # print fields
+        errors = generic_check(check_type,filename,headers,fields, forms)
+        if errors:
+            all_found_errors.append(errors)
+    with open('14_0076_errors.csv', 'wb') as error_file:
+        csvwriter = csv.writer(error_file)
+        csv_headers = ['Subject ID', 'Form Name', 'CRF Question Location', 'RedCap Label', 'Current Value', 'Details']
+        csvwriter.writerow(csv_headers)
+        for item in all_found_errors:
+            for subjects_errors in item:
+                for single_error in subjects_errors:
+                    csvwriter.writerow(single_error)
 
 if __name__ == '__main__':
     main()
